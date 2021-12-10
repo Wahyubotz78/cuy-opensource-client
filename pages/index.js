@@ -8,9 +8,9 @@ const IndexPage = () => {
   return (
     <>
       <div onClick={() => router.push('/about')}>
-        GO TO ABOUT (with <code>router</code>)
+        CUYCOURSE ONLINE (testing about click here)
       </div>
-      <RepoSearch />
+      {/* <RepoSearch /> */}
     </>
   )
 }
