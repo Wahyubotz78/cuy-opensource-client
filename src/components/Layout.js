@@ -32,15 +32,15 @@ class Layout extends PureComponent {
               "events": {
                 "onClick": {
                   "enable": true,
-                  "mode": "repulse"
+                  "mode": "push"
                 },
                 "onHover": {
                   "enable": true,
-                  "mode": "attract",
+                  "mode": "repulse",
                   "parallax": {
                     "enable": true,
                     "force": 10,
-                    "smooth": 50
+                    "smooth": 10
                   }
                 },
                 "resize": true
@@ -55,10 +55,10 @@ class Layout extends PureComponent {
                   "speed": 1
                 },
                 "repulse": {
-                  "distance": 550,
-                  "duration": 0.5,
-                  "factor": 100,
-                  "speed": 1,
+                  "distance": 250,
+                  "duration": 1,
+                  "factor": 10,
+                  "speed": 0.2,
                   "maxSpeed": 50,
                   "easing": "ease-out-quad"
                 },
@@ -138,7 +138,7 @@ class Layout extends PureComponent {
               },
               "move": {
                 "angle": {
-                  "offset": 0,
+                  "offset": 1,
                   "value": 90
                 },
                 "attract": {
@@ -149,14 +149,14 @@ class Layout extends PureComponent {
                     "y": 600
                   }
                 },
-                "decay": 0,
+                "decay": 1,
                 "direction": "none",
                 "drift": 0,
-                "enable": true,
+                "enable": false,
                 "gravity": {
                   "acceleration": 0.11,
                   "enable": false,
-                  "inverse": true,
+                  "inverse": false,
                   "maxSpeed": 0.5
                 },
                 "path": {
@@ -183,7 +183,7 @@ class Layout extends PureComponent {
                 "speed": 1,
                 "spin": {
                   "acceleration": 0.1,
-                  "enable": false
+                  "enable": true
                 },
                 "straight": false,
                 "trail": {
@@ -293,7 +293,7 @@ class Layout extends PureComponent {
                 },
               },
               "stroke": {
-                "width": 4
+                "width": 2
               },
             },
             "pauseOnBlur": true,

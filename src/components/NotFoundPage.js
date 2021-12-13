@@ -9,7 +9,7 @@ export default function NotFoundPage() {
             </Title>
             <div style={{ textAlign: 'center', color: "#FFFFFF" }}>
 
-                <p>halaman yang dicari gak ada 😣</p>
+                <p>halaman yang dicari belum kelar 😣</p>
                 <a href="/" style={{ color: "white" }}>
                     kembali ke awal
                 </a>
