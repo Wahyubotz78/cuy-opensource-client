@@ -4,7 +4,6 @@ class Layout extends PureComponent {
   render() {
     return (
       <div className="layout">
-        <Navbar />
         {this.props.children}
       </div>
     );

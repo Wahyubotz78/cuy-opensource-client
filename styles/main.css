@@ -1,4 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,800&display=swap');
+*, *::after, *::before {
+  box-sizing: border-box;
+}
 body {
   font-family: 'Poppins', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+#join {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  cursor: pointer;
+}
+#join:hover {
+  color: orange;
 }
