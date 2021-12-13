@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 export default function MyApp(props) {
   const { Component, pageProps } = props
   const store = useStore(pageProps.state)
-  const title = 'Cuycourse Online'
+  const title = 'Deacourse Online'
   return (
     <>
       <Helmet>
@@ -24,6 +24,7 @@ export default function MyApp(props) {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta property='og:title' content={title} />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css" />
       </Helmet>
       <ThemeProvider theme={theme}>
         <GlobalStyle />

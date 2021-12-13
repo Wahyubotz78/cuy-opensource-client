@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-
+import React, { useEffect } from "react";
 import PlaygroundPage from 'components/PlaygroundPage'
 const Playground = () => {
-  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    NProgress.inc();
+    NProgress.done();
+  }, [])
   return (
-    <PlaygroundPage/>
+    <PlaygroundPage />
   )
 }
 

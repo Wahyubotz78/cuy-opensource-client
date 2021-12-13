@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Sandpack } from "@codesandbox/sandpack-react";
 import "@codesandbox/sandpack-react/dist/index.css";
 import { Wrapper } from "../../styled/global"
 import { App, SigninButton, RegisterButton } from "./staticFile"
 
 export default function PlaygroundPage() {
+
     return (
         <Wrapper>
-            <h1>PLAYGROUND</h1>
+            <h1 style={{color: "white"}}>PLAYGROUND</h1>
             <Sandpack template="react"
                 files={{
                     "/RegisterButton.js": RegisterButton,

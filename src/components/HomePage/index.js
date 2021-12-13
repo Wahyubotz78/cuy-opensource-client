@@ -1,14 +1,13 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import { Wrapper } from "../../styled/global"
 import Intro from "./Intro"
-import Join from "../Helper/Join"
+import Join from "./Join"
 
 export default function HomePage({ open, setOpen }) {
     return (
         <Wrapper>
             <Intro />
-            <Join open={open} setOpen={setOpen}/>
+            <Join open={open} setOpen={setOpen} />
         </Wrapper>
     )
 }
