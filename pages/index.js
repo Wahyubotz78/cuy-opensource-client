@@ -1,29 +1,15 @@
-import RepoSearch from 'features/repoSearch/RepoSearch'
-import { useRouter } from 'next/router'
-import { createStore } from 'store'
-import { getReposAsync } from 'features/repoSearch/repoSearchSlice'
+import React, { useState } from "react";
 
+import HomePage from 'components/HomePage'
+import Navbar from 'components/Navbar'
 const IndexPage = () => {
-  const router = useRouter()
+  const [open, setOpen] = useState(false);
   return (
     <>
-      <div onClick={() => router.push('/about')}>
-        GO TO ABOUT (with <code>router</code>)
-      </div>
-      <RepoSearch />
+      <Navbar open={open} />
+      <HomePage open={open} setOpen={setOpen} />
     </>
   )
-}
-
-export async function getStaticProps () {
-  const store = createStore()
-  await store.dispatch(getReposAsync('python'))
-
-  return {
-    props: {
-      state: store.getState()
-    }
-  }
 }
 
 export default IndexPage
