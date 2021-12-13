@@ -6,6 +6,7 @@ import { useStore } from 'store'
 import Layout from 'components/Layout'
 import theme from 'theme'
 import '../styles/main.css'
+import 'babel-polyfill'
 
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
