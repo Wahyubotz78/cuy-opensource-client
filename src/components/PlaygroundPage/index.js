@@ -8,7 +8,7 @@ export default function PlaygroundPage() {
 
     return (
         <Wrapper>
-            <h1><a href="/playground" style={{ textDecoration: "none", color: "black" }}>PLAYGROUND</a></h1>
+            <h1><a href="/" style={{ textDecoration: "none", color: "black" }}>PLAYGROUND</a></h1>
             <Sandpack template="react"
                 files={{
                     "/RegisterButton.js": RegisterButton,
