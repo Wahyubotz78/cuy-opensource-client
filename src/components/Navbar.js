@@ -6,10 +6,10 @@ import {
 export default function Navbar({ open }) {
   return (
     <StyledMenu open={open}>
-      <a href="/playground">
+      <a href="#">
         playground
       </a>
-      <a href="/masuk" as="button" id="join">
+      <a href="#" as="button" id="join">
         masuk
       </a>
     </StyledMenu>

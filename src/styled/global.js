@@ -31,7 +31,6 @@ export const Box = styled.div`
   `
 
 export const CircleBox = styled.div`
-cursor: pointer;
 padding: 10px;
 margin: 0 auto;
 width: 250px;
@@ -64,7 +63,7 @@ export const Title = styled.h1`
     text-align: center;
     text-transform: uppercase;
     font-size: 225px; 
-    color: #FFFFFF;
+    color: #0D0C1D;
     font-weight: bold; 
     letter-spacing: -1px; 
     line-height: 1; 
@@ -78,7 +77,7 @@ export const Description = styled.p`
     font-size: 2.9em;
     text-align: center;
     margin-top: -80px;
-    color: #FFFFFF;
+    color: #0D0C1D;
 
     @media screen and (max-width: 768px) {
         font-size: 35px; 
@@ -91,16 +90,16 @@ export const JoinButton = styled.button`
   display: flex;
   justify-content: center;
   border-radius: 11px;
-  border: 2px solid #f7f7f7;
-  color: orange;
+  border: 2px solid #0D0C1D;
+  color: #0D0C1D;
   cursor: pointer;
   width: 150px;
   margin: 0 auto;
   padding: 0.25em 1em;
   :hover {
-      background-color: orange;
+      background-color: #0D0C1D;
       color: white;
-      border: 2px solid orange;
+      border: 2px solid #0D0C1D;
       transition: color 0.3s linear;
       transition: background-color 0.5s linear;
 
