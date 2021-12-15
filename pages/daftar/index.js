@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+import { Provider } from "react-redux";
+import store from '../../src/redux/store'
+import RegisterPage from '../../src/components/Register';
+import { ModalProvider } from 'styled-react-modal'
 
-import RegisterPage from '../../src/components/Register'
-const IndexPage = () => {
-    
+const IndexPage = () => {    
   return (
-    <>
-        <RegisterPage />
-    </>
+    <Provider store={store}>
+        <ModalProvider>
+          <RegisterPage />
+        </ModalProvider>
+    </Provider>
   )
 }
 
