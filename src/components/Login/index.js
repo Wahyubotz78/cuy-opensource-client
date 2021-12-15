@@ -28,7 +28,7 @@ const Login = (props) => {
 
     useEffect(() => {
         if(props.loginReducer.data != null){
-            console.log(decryptRequest(props.loginReducer.data))
+            console.log('data user', decryptRequest(props.loginReducer.data))
         }else if(props.loginReducer.Error){
             setMessage('Email atau password salah')
             setIsOpen(true)

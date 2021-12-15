@@ -54,6 +54,7 @@ export default class extends Document {
         <body {...this.helmetBodyAttrComponents}>
           <Main />
           <NextScript />
+          <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"/>
         </body>
       </Html>
     );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
     padding: 0.2rem calc((100vw - 1000px) / 2);
     margin: 5px;
-
+    z-index: 999;
 `;
 
 export const FlexContainer = styled.section`
@@ -31,11 +31,10 @@ export const Box = styled.div`
   `
 
 export const CircleBox = styled.div`
-cursor: pointer;
 padding: 10px;
 margin: 0 auto;
-width: 150px;
-height: 150px;
+width: 250px;
+height: 250px;
 border-radius: 15px;
 @media screen and (max-width: 768px) {
     font-size: 35px; 
@@ -63,8 +62,8 @@ text-align: center;
 export const Title = styled.h1`
     text-align: center;
     text-transform: uppercase;
-    /* color: #111; */
     font-size: 225px; 
+    color: #0D0C1D;
     font-weight: bold; 
     letter-spacing: -1px; 
     line-height: 1; 
@@ -78,8 +77,31 @@ export const Description = styled.p`
     font-size: 2.9em;
     text-align: center;
     margin-top: -80px;
+    color: #0D0C1D;
+
     @media screen and (max-width: 768px) {
         font-size: 35px; 
         margin-top: -40px;
     }
 `;
+
+export const JoinButton = styled.button`
+  background: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 11px;
+  border: 2px solid #0D0C1D;
+  color: #0D0C1D;
+  cursor: pointer;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0.25em 1em;
+  :hover {
+      background-color: #0D0C1D;
+      color: white;
+      border: 2px solid #0D0C1D;
+      transition: color 0.3s linear;
+      transition: background-color 0.5s linear;
+
+  }
+`
