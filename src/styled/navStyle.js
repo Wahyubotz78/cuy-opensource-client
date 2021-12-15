@@ -44,7 +44,4 @@ export const StyledMenu = styled.nav`
       color: ${({ theme }) => theme.primaryHover};
     }
   }
-  .nice {
-      background-color:blue;
-    }
 `;

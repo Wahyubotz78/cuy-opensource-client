@@ -13,7 +13,8 @@ export default function Intro() {
                 </Title>
             </Typist>
             <Description>
-                jalan pintas belajar <span style={{ color: "#FDCE2A", fontWeight: "bold" }}>coding</span>
+                jalan pintas belajar <span style={{ color: "orange", fontWeight: "bold" }}>coding</span>
+                <p style={{ color: "white", textAlign: "center", fontSize: 12 }}>v1.0.0 - development mode</p>
             </Description>
         </div>
     )
