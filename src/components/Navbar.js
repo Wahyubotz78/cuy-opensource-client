@@ -1,24 +1,18 @@
 import React from "react";
-import {
-  StyledMenu
-} from "../styled/navStyle";
+import { StyledMenu } from "../styled/navStyle";
 
 export default function Navbar({ open }) {
   return (
     <StyledMenu open={open}>
       <div style={{ marginTop: 10 }}>
-        <a href="/course">
-          course
-        </a>
-        <a href="/playground">
-          playground
-        </a>
+        <a href="/course">course</a>
+        <a href="/playground">playground</a>
       </div>
       <div id="join">
         <a href="#" as="button">
-          masuk
+          devmode
         </a>
       </div>
-    </StyledMenu >
+    </StyledMenu>
   );
 }
