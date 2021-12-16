@@ -19,6 +19,9 @@ const Register = (props) => {
     const [message, setMessage] = useState('')
 
     useEffect(() => {
+        if(sessionStorage.getItem('r') != null){
+            window.location = '/dashboard'
+        }
         if(props.registerReducer.message == 'OK'){
             setIsOpen(true)
             setMessage('Pendaftaran Berhasil')
