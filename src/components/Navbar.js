@@ -16,7 +16,7 @@ export default function Navbar({ open }) {
       </div>
       <div id="join">
         <a href="#" as="button">
-          masuk
+          devMode
         </a>
       </div>
     </StyledMenu >
