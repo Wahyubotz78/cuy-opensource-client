@@ -1,13 +1,13 @@
 {
-  "name": "nextjs-redux-starter",
+  "name": "deacourse",
   "public": true,
   "version": 2,
   "builds": [{
     "src": "next.config.js",
     "use": "@now/next"
   }],
-  "alias": "nextjs-redux-starter.now.sh",
+  "alias": "deacourse.vercel.app",
   "env": {
-    "GITHUB_API_ENDPOINT": "https://api.github.com"
+    "ADMIN_NUMBER": 6281285241889
   }
 }
