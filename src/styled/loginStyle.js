@@ -19,6 +19,7 @@ export const CardHeading = styled.h1`
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    color: #222;
 `;
 
 export const CardBody = styled.div`
@@ -62,7 +63,7 @@ export const CardInput = styled.input`
     }
     
     &:focus {
-        border-bottom-color: #e5195f;
+        border-bottom-color: orange;
         outline: 0;
     }
 `;
@@ -103,7 +104,9 @@ export const CardOptionsNote = styled.small`
     width: 100%;
     font-size: 12px;
     text-align: center;
+    color: #555;
     text-transform: uppercase;
+    transition: border-bottom-color 0.25s ease-in;
 `;
 
 export const CardOptions = styled.ul`
@@ -147,12 +150,12 @@ export const CardButton = styled.button`
 
 export const CardLink = styled.a`
     display: inline-block;
-    font-size: 12px;
+    font-size: 18px;
     text-decoration: none;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     transition: color 0.25s ease-in;
-
+    float: right;
     &:hover {
         color: #777;
     }
