@@ -27,8 +27,12 @@ const Login = (props) => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
+        if(sessionStorage.getItem('r') != null){
+            window.location = '/dashboard'
+        }
         if(props.loginReducer.data != null){
-            console.log('data user', decryptRequest(props.loginReducer.data))
+            sessionStorage.setItem('r', props.loginReducer.data)
+            window.location = '/dashboard'
         }else if(props.loginReducer.Error){
             setMessage('Email atau password salah')
             setIsOpen(true)
