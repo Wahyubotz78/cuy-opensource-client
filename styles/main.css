@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,800&display=swap');
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   text-rendering: optimizeLegibility;
@@ -9,13 +11,38 @@ body {
 
 #join {
   background: white;
-  color: black;
-  padding: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 15px;
   border-radius: 10px;
-  letter-spacing: 0.2rem;
-  text-align: center;
   cursor: pointer;
 }
-#join:hover {
+
+@media (max-width: 576px) {
+  #join {
+    position: relative;
+    padding: 0;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  #join > a {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin-left: 15px;
+  }
+}
+
+#join > a {
+  color: black;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+#join a:hover {
   color: orange;
 }

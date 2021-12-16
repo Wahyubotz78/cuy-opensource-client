@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-    padding: 0.2rem calc((100vw - 1000px) / 2);
+    padding: 15px;
     margin: 5px;
     z-index: 999;
 `;
@@ -72,7 +72,7 @@ export const Title = styled.h1`
     }
 `;
 
-export const Description = styled.p`
+export const Description = styled.div`
     text-transform: lowercase;
     font-size: 2.9em;
     text-align: center;

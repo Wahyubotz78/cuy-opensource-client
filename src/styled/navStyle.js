@@ -1,31 +1,23 @@
 import styled from "styled-components";
 
 export const StyledMenu = styled.nav`
-  /* display: ${({ open }) => open ? 'block' : 'none'}; */
   display: block;
-  flex-direction: row;
-  justify-content: center;
   background: ${({ theme }) => theme.primaryDark};
   width: 100%;
-  height: 100px;
-  text-align: center;
-  padding: 2rem;
+  height: auto;
+  padding: 20px;
   position: absolute;
   top: 0;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => open ? 'translateY(0)' : 'translateY(-100%)'};
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    height: 235px;
-  }
 
   a {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
-    margin: 1.5em;
-    padding: 1.5rem 0;
     font-weight: bold;
-    letter-spacing: 1.1rem;
+    margin-left: 10px;
+    letter-spacing: 0.1rem;
     color: ${({ theme }) => theme.primaryLight};
     text-decoration: none;
     transition: color 0.5s linear;
@@ -45,3 +37,22 @@ export const StyledMenu = styled.nav`
     }
   }
 `;
+
+export const BackButton = styled.nav`{
+  background: ${({ theme }) => theme.primaryLight};
+  width: 100%;
+  height: 80px;
+  padding: 18px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    height: 50px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #444;
+    cursor: pointer;
+  }
+}`
