@@ -4,8 +4,6 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   padding: 1em;
   height: 100vh;
-  @media (max-width: 576px) {
-    }
 `;
 
 export const Title = styled.h1`
