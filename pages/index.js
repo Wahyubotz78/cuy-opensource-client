@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from "react";
-import NProgress from "nprogress"
-import HomePage from 'components/HomePage'
-import Navbar from 'components/Navbar'
+import NProgress from "nprogress";
+import HomePage from "components/HomePage";
 
 const IndexPage = () => {
-  const [open, setOpen] = useState(false);
   useEffect(() => {
     NProgress.inc();
     NProgress.done();
-  }, [open])
+  }, []);
   return (
     <>
-      <Navbar open={open} />
-      <HomePage open={open} setOpen={setOpen} />
+      <HomePage />
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

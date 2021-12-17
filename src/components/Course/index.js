@@ -4,10 +4,13 @@ import {
   Title,
   CardContent,
   CH6,
+  CH61,
   CH3,
+  CH31,
   CardPrev,
   CardInfo,
   ButtonCard,
+  CardInfoDisabled,
   CardContentDisabled,
   ButtonCardDisabled,
 } from "../../styled/courseStyle";
@@ -18,44 +21,51 @@ export default function Course() {
   return (
     <Wrapper>
       <NavbarBack />
-      <Title>COURSE TERSEDIA</Title>
-      <CardContent>
+      <Title style={{marginTop: -1}}>COURSE TERSEDIA</Title>
+      <CardContent style={{marginTop: -20}}>
         <CardPrev>
           <CH6>Course</CH6>
-          <CH3>Frontend Basic</CH3>
-          <div style={{textAlign: 'center', marginTop: 15, cursor: 'pointer'}}>
-            <a href="/course/journey-1/demo" style={{textDecoration: 'none', color: 'white', fontWeight: 'bold'}}>TRY LIVE DEMO</a>
+          <CH31>Frontend Basic</CH31>
+          <div
+            style={{ textAlign: "#222", marginTop: 15, cursor: "pointer" }}
+          >
+            <a
+              href="/course/journey-1/demo"
+              style={{ color: "#222", fontSize: 12 }}
+            >
+              TRY LIVE DEMO
+            </a>
           </div>
         </CardPrev>
         <CardInfo>
-          <h6>Journey #1 (18 - 19 Desember 2021)</h6>
-          <h3>Static Web Penjualan & Linking Chat WA</h3>
+          <CH6>Journey #1 (18 - 19 /12/2021)</CH6>
+          <CH31>Static Web Penjualan & Linking Chat WA</CH31>
           <ButtonCard as="a" href="/course/journey-1">
             JOIN
           </ButtonCard>
         </CardInfo>
       </CardContent>
       <CardContentDisabled>
-        <CardPrev>
+        <CardPrev style={{ background: "#999" }}>
           <CH6>Course</CH6>
-          <CH3>FrontEnd Basic</CH3>
+          <CH31>FrontEnd Basic</CH31>
         </CardPrev>
-        <CardInfo>
-          <h6>Journey #2 (23 Desember 2021)</h6>
-          <h2>Mastering CSS Style</h2>
+        <CardInfoDisabled>
+          <CH6>Journey #2</CH6>
+          <CH31>Mastering CSS</CH31>
           <ButtonCardDisabled>🔓</ButtonCardDisabled>
-        </CardInfo>
+        </CardInfoDisabled>
       </CardContentDisabled>
       <CardContentDisabled>
-        <CardPrev>
+        <CardPrev style={{ background: "#999" }}>
           <CH6>Course</CH6>
-          <CH3>Frontend Basic</CH3>
+          <CH31>Frontend Basic</CH31>
         </CardPrev>
-        <CardInfo>
-          <h6>Journey #3 (26 Desember 2021)</h6>
-          <h2>Vanilla JS Fundamental</h2>
+        <CardInfoDisabled>
+          <CH3>Journey #3</CH3>
+          <CH31>Vanilla JS Fundamental</CH31>
           <ButtonCardDisabled>🔓</ButtonCardDisabled>
-        </CardInfo>
+        </CardInfoDisabled>
       </CardContentDisabled>
       <GoToHome />
     </Wrapper>

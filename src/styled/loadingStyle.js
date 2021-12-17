@@ -14,10 +14,9 @@ export const DotWrapper = styled.div`
 export const Dot = styled.div`
   background-color: ${({ theme }) => theme.primaryDark};
   border-radius: 50%;
-  width: 10px;
+  width: 100%;
   height: 10px;
-  margin: 0 5px;
   
-  animation: ${BounceAnimation} 0.5s linear infinite;
+  animation: ${BounceAnimation} 1s linear infinite;
   animation-delay: ${props => props.delay};
 `;

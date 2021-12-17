@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
   border: ${(props) => `1px solid ${props.theme.primaryLight}`};
   padding: 25px 12px 18px;
+  width: 500px;
+  margin: 0 auto;
   background: ${(props) => `linear-gradient(
     45deg, ${props.theme.primaryLight}, ${props.theme.primaryLight}
   )`};
@@ -97,6 +99,5 @@ export const ActionChild = styled.button`
 export const StyledPhoto = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border: ${(props) => `1px solid ${props.theme.primaryLight}`};
 `

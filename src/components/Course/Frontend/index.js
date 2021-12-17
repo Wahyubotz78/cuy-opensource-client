@@ -30,9 +30,11 @@ export default function Frontend({
 }) {
   return (
     <div>
-      <NavbarBack />
       <StyledContainer>
-        <StyledPhoto src="/images/frontendbasic.jpg" />
+        <NavbarBack />
+        <center>
+          <StyledPhoto src="/images/frontendbasic.jpg" />
+        </center>
         <Title>{title}</Title>
         <Description>
           <Detail>

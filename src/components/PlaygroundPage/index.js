@@ -10,7 +10,7 @@ export default function PlaygroundPage() {
   return (
     <Wrapper>
       <NavbarBack />
-      <h1 style={{ marginTop: 70, textAlign: "center" }}>
+      <h1 style={{ marginTop: -3, textAlign: "center" }}>
         <a
           href="/playground"
           style={{ textDecoration: "none", color: "black" }}
