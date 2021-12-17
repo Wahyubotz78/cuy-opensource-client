@@ -8,6 +8,6 @@
   }],
   "alias": "deacourse.vercel.app",
   "env": {
-    "ADMIN_NUMBER": 6281285241889
+    "ADMIN_NUMBER": "6281285241889"
   }
 }

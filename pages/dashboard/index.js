@@ -7,9 +7,10 @@ import { ModalProvider } from 'styled-react-modal'
 const IndexPage = () => {    
   return (
     <Provider store={store}>
-        <ModalProvider>
+      <h1>ComingSoon</h1>
+        {/* <ModalProvider>
           <DashboardPage />
-        </ModalProvider>
+        </ModalProvider> */}
     </Provider>
   )
 }

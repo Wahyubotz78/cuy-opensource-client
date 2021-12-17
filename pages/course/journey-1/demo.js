@@ -121,7 +121,7 @@ export default function Demo() {
                   "Size L",
                   "Biru",
                   "user test 1",
-                  "081111111",
+                  adminNumber,
                   "Jakarta"
                 )
               }
@@ -155,7 +155,7 @@ export default function Demo() {
                   "Size M",
                   "Hijau",
                   "user test 2",
-                  "081222222",
+                  adminNumber,
                   "Kalimantan"
                 )
               }
@@ -189,7 +189,7 @@ export default function Demo() {
                   "Size XL",
                   "Hitam",
                   "user test 3",
-                  "081333333",
+                  adminNumber,
                   "Jogjakarta"
                 )
               }
@@ -225,7 +225,7 @@ export default function Demo() {
                   "Size XXL",
                   "Merah",
                   "user test 4",
-                  "08144444",
+                  adminNumber,
                   "Sulawesi"
                 )
               }
@@ -259,7 +259,7 @@ export default function Demo() {
                   "Size XXL",
                   "Putih",
                   "user test 5",
-                  "081555555",
+                  adminNumber,
                   "Ternate"
                 )
               }
@@ -293,7 +293,7 @@ export default function Demo() {
                   "Size M",
                   "Hitam",
                   "user test 6",
-                  "086666666",
+                  adminNumber,
                   "Batam"
                 )
               }
