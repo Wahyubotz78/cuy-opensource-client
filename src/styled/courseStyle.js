@@ -5,7 +5,7 @@ export const Wrapper = styled.section`
   padding: 1em;
   height: 100vh;
   @media (max-width: 576px) {
-    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -19,9 +19,9 @@ export const Title = styled.h1`
     font-size: 2rem;
     margin-top: 50px;
   }
-`
+`;
 export const CardContent = styled.div`
-  background: papayawhip;
+  background: #f7f7f7;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -30,11 +30,41 @@ export const CardContent = styled.div`
   display: flex;
   max-width: 100%;
   padding: 0.5em 0;
-  margin: 20px auto;
+  margin: 10px auto;
   overflow: hidden;
   @media (max-width: 576px) {
     max-width: 100%;
   }
+`;
+
+export const CH6 = styled.h6`
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #555;
+  text-transform: uppercase;
+`;
+
+export const CH61 = styled.h5`
+  margin: 0;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #F7F7F7;
+  text-transform: uppercase;
+`;
+
+export const CH3 = styled.h3`
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: azure;
+  margin: 10px 0;
+`;
+
+export const CH31 = styled.h3`
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: black;
+  margin: 10px 0;
 `;
 
 export const CardContentDisabled = styled.div`
@@ -54,29 +84,28 @@ export const CardContentDisabled = styled.div`
   }
 `;
 
-export const CH6 = styled.h6`
-  opacity: 0.6;
-  margin: 0;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-`;
-export const CH3 = styled.h3`
-  letter-spacing: 1px;
-  margin: 10px 0;
-`;
-
 export const CardPrev = styled.div`
   background-color: orange;
   color: #222;
   padding: 30px;
   max-width: 250px;
   @media (max-width: 576px) {
-    max-width: 150px;
-    padding: 10px;
+    max-width: 180px;
+    padding: 20px;
   }
 `;
 
 export const CardInfo = styled.div`
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  color: #f7f7f7;
+  @media (max-width: 576px) {
+    padding: 16px;
+  }
+`;
+
+export const CardInfoDisabled = styled.div`
   padding: 30px;
   position: relative;
   width: 100%;
@@ -100,9 +129,9 @@ export const ButtonCard = styled.a`
   right: 9px;
   letter-spacing: 1px;
   &:hover {
-        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
-        transform: translate(0, -1px);
-    }
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+    transform: translate(0, -1px);
+  }
   @media (max-width: 576px) {
     padding: 7px 16px;
     bottom: 10px;
