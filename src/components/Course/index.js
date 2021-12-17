@@ -21,7 +21,7 @@ export default function Course() {
   return (
     <Wrapper>
       <NavbarBack />
-      <Title style={{marginTop: -1}}>COURSE TERSEDIA</Title>
+      <Title style={{marginTop: -1, marginLeft: 25}}>COURSE TERSEDIA</Title>
       <CardContent style={{marginTop: -20}}>
         <CardPrev>
           <CH6>Course</CH6>

@@ -53,7 +53,7 @@ export default function Demo() {
   return (
     <div>
       <NavbarBack />
-      <h1 style={{ textAlign: "center", marginTop: 80 }}>DEMO CONTOH</h1>
+      <h1 style={{ textAlign: "center", marginTop: 15}}>DEMO CONTOH</h1>
       <CardWrapper>
         <CardBody>
           <CardFieldset>

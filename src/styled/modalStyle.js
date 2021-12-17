@@ -24,7 +24,7 @@ export const ModalPopup = styled.div`
 	left: 0;
     margin: 0 auto;
     text-align: center;
-	height: 100vh;
+	height: 100%;
 	width:100%;
 	background: rgba(0,0,0, 0.7);
 `;
