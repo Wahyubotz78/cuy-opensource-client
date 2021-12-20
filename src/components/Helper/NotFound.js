@@ -1,10 +1,10 @@
 import React from "react";
-import { Title } from "../../styled/global";
+import { TitleS } from "../../styled/global";
 
 export default function NotFoundPage() {
   return (
     <div>
-      <Title>404 bro sorry</Title>
+      <TitleS>404 bro sorry</TitleS>
       <div style={{ textAlign: "center", color: "#FFFFFF" }}>
         <p>halaman yang dicari belum kelar 😣</p>
         <a href="/" style={{ color: "white" }}>
