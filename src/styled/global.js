@@ -7,13 +7,6 @@ export const WrapperS = styled.div`
     padding: 5px;
     margin: 5px;
   }
-  div {
-    background-image: url("/images/secondary-bg.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 `;
 
 export const BoxS = styled.div`
@@ -23,7 +16,6 @@ export const BoxS = styled.div`
   height: auto;
   justify-content: center;
   align-items: center;
-
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
   }
@@ -34,10 +26,16 @@ export const TitleS = styled.h1`
   text-transform: uppercase;
   font-size: 225px;
   color: #f7f7f7;
-  text-shadow: 11px 9px #222;
+  text-shadow: -10px -2px; #FFF;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
+  background-image: url("/images/mainbg.png");
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   @media screen and (max-width: 768px) {
     font-size: 125px;
   }

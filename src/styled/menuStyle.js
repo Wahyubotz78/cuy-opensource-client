@@ -23,7 +23,7 @@ export const MainMenuS = styled.div`
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    background: #222;
+    background-image: url("/images/mainbg.png");
     display: flex;
     justify-content: center;
     position: fixed;

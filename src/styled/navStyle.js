@@ -10,7 +10,7 @@ export const NavContainer = styled.nav`
   display: flex;
   z-index: 9;
   overflow: hidden;
-  background: #212122;
+  background-image: url("/images/mainbg.png");
   border-bottom: 2px solid orange;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
