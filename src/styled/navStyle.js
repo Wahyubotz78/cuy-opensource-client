@@ -9,12 +9,13 @@ export const NavContainer = styled.nav`
   position: fixed;
   display: flex;
   z-index: 9;
+  overflow: hidden;
   background: #212122;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
-    position: fixed;
     bottom: 0;
     top: auto;
+    border-top: 3px solid orange;
   }
 `;
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper } from "../../styled/global";
+import { Wrapper, FixGap } from "../../styled/global";
 import Intro from "./Intro";
 import Menu from "./Menu";
 import About from "./About";
@@ -10,6 +10,7 @@ export default function Home() {
       <Intro />
       <Menu />
       <About />
+      <FixGap />
     </Wrapper>
   );
 }
