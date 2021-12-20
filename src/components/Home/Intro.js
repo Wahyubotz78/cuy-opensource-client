@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Wrapper, Title, Description } from "../../styled/global";
 import Typist from "react-typist";
@@ -9,9 +10,9 @@ export default function Intro() {
         cursor={{
           element: "",
         }}
-        avgTypingDelay={400}
+        avgTypingDelay={150}
       >
-        <Title>CUY.</Title>
+        <Title>HALO CUY.</Title>
       </Typist>
       <Description>
         Virtualize Your
