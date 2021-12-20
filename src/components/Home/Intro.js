@@ -1,23 +1,22 @@
-
 import React from "react";
-import { Wrapper, Title, Description } from "../../styled/global";
+import { WrapperS, TitleS, DescriptionS } from "../../styled/global";
 import Typist from "react-typist";
 
 export default function Intro() {
   return (
-    <Wrapper>
+    <WrapperS>
       <Typist
         cursor={{
           element: "",
         }}
         avgTypingDelay={150}
       >
-        <Title>HALO CUY.</Title>
+        <TitleS>HALO CUY.</TitleS>
       </Typist>
-      <Description>
+      <DescriptionS>
         Virtualize Your
         <span style={{ color: "orange", fontWeight: "bold" }}> Mind </span>
-      </Description>
-    </Wrapper>
+      </DescriptionS>
+    </WrapperS>
   );
 }

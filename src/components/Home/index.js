@@ -1,17 +1,17 @@
 import React from "react";
-import { Wrapper, FixGap } from "../../styled/global";
+import { WrapperS, FixGapS } from "../../styled/global";
 import Intro from "./Intro";
 import Menu from "./Menu";
 import About from "./About";
 
 const Home = () => {
   return (
-    <Wrapper>
+    <WrapperS>
       <Intro />
       <Menu />
       <About />
-      {/* <FixGap /> */}
-    </Wrapper>
+      <FixGapS />
+    </WrapperS>
   );
 };
 export default Home;

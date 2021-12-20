@@ -1,22 +1,42 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const WrapperS = styled.div`
   padding: 15px;
   margin: 15px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 5px;
     margin: 5px;
   }
+  div {
+    background-image: url("/images/secondary-bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 `;
 
-export const FixGap = styled.div`
+export const BoxS = styled.div`
+  display: flex;
+  background-color: #222;
+  opacity: 0.9;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+  }
+`;
+
+export const FixGapS = styled.div`
   margin-top: 10px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     margin-top: 100px;
   }
 `;
 
-export const Title = styled.h1`
+export const TitleS = styled.h1`
   text-align: center;
   text-transform: uppercase;
   font-size: 225px;
@@ -30,7 +50,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const Description = styled.div`
+export const DescriptionS = styled.div`
   text-transform: lowercase;
   font-size: 2.9em;
   text-align: center;

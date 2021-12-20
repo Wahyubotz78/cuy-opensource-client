@@ -1,36 +1,35 @@
 import React from "react";
-import { Wrapper } from "../../styled/global";
+import { WrapperS, BoxS } from "../../styled/global";
 import {
-  ImageContainer,
-  ImageTitle,
-  Box,
-  BoxImage,
-  Image,
+  ImageContainerS,
+  IconTitleS,
+  BoxIconS,
+  IconS,
 } from "../../styled/aboutStyle";
 
 export default function About() {
   return (
-    <Wrapper>
-      <Box>
-        <BoxImage>
-          <ImageContainer>
-            <Image src="/images/about1.jpg" />
-            <ImageTitle>Take Free Courses And Become A Self Learner</ImageTitle>
-          </ImageContainer>
-        </BoxImage>
-        <BoxImage>
-          <ImageContainer>
-            <Image src="/images/about2.jpg" />
-            <ImageTitle>Achieve your goals and get certified</ImageTitle>
-          </ImageContainer>
-        </BoxImage>
-        <BoxImage>
-          <ImageContainer>
-            <Image src="/images/about3.jpg" />
-            <ImageTitle>Chill with your friends in this tech vibes</ImageTitle>
-          </ImageContainer>
-        </BoxImage>
-      </Box>
-    </Wrapper>
+    <WrapperS>
+      <BoxS>
+        <BoxIconS>
+          <ImageContainerS>
+            <IconS>💪</IconS>
+            <IconTitleS>Take Free Courses And Become A Self Learner</IconTitleS>
+          </ImageContainerS>
+        </BoxIconS>
+        <BoxIconS>
+          <ImageContainerS>
+            <IconS>🚀</IconS>
+            <IconTitleS>Achieve your goals and get certified</IconTitleS>
+          </ImageContainerS>
+        </BoxIconS>
+        <BoxIconS>
+          <ImageContainerS>
+            <IconS>🔖</IconS>
+            <IconTitleS>Chill with your friends in this tech vibes</IconTitleS>
+          </ImageContainerS>
+        </BoxIconS>
+      </BoxS>
+    </WrapperS>
   );
 }
