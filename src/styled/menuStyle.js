@@ -43,11 +43,11 @@ export const Menu = styled.div`
   justify-content: center;
   font-size: clamp(1rem, 8vw, 99rem);
   padding: 1vw;
-  cursor: pointer;
   img {
     width: 50%;
     height: 50%;
     margin: 0 auto;
+    cursor: pointer;
   }
   h2 {
     font-size: clamp(1rem, 2vw, 99rem);
@@ -59,6 +59,7 @@ export const Menu = styled.div`
     white-space: nowrap;
     color: #f7f7f7;
     text-shadow: 5px 5px #222;
+    cursor: pointer;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
     img {
