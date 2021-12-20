@@ -1,14 +1,11 @@
 import styled from "styled-components";
 
-export const ContainerMenu = styled.section`
+export const ContainerMenuS = styled.section`
   margin: auto;
   padding: 1rem;
-  @media (min-width: 48em) {
-    padding: 4rem;
-  }
 `;
 
-export const HeaderMenu = styled.header`
+export const HeaderMenuS = styled.header`
   margin-bottom: 2rem;
   & h1 {
     font-size: clamp(1rem, 2vw, 99rem);
@@ -20,7 +17,7 @@ export const HeaderMenu = styled.header`
   }
 `;
 
-export const MainMenu = styled.div`
+export const MainMenuS = styled.div`
   display: grid;
   z-index: 1;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -37,7 +34,7 @@ export const MainMenu = styled.div`
   }
 `;
 
-export const Menu = styled.div`
+export const MenuS = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

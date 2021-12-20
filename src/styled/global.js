@@ -29,19 +29,12 @@ export const BoxS = styled.div`
   }
 `;
 
-export const FixGapS = styled.div`
-  margin-top: 10px;
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    margin-top: 100px;
-  }
-`;
-
 export const TitleS = styled.h1`
   text-align: center;
   text-transform: uppercase;
   font-size: 225px;
   color: #f7f7f7;
-  text-shadow: 15px 10px #222;
+  text-shadow: 11px 9px #222;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
@@ -56,10 +49,14 @@ export const DescriptionS = styled.div`
   text-align: center;
   margin-top: -80px;
   color: #f7f7f7;
-  text-shadow: 10px 8px #222;
+  text-shadow: 5px 3px #222;
 
   @media screen and (max-width: 768px) {
     font-size: 35px;
     margin-top: -40px;
   }
+`;
+
+export const ClearTopS = styled.div`
+  margin-top: 100px;
 `;

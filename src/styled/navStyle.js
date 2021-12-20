@@ -11,11 +11,13 @@ export const NavContainer = styled.nav`
   z-index: 9;
   overflow: hidden;
   background: #212122;
+  border-bottom: 2px solid orange;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
     bottom: 0;
     top: auto;
     border-top: 3px solid orange;
+    border-bottom: none;
   }
 `;
 

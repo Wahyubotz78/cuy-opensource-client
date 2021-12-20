@@ -1,5 +1,5 @@
 import React from "react";
-import { WrapperS, FixGapS } from "../../styled/global";
+import { WrapperS, ClearTopS } from "../../styled/global";
 import Intro from "./Intro";
 import Menu from "./Menu";
 import About from "./About";
@@ -10,7 +10,7 @@ const Home = () => {
       <Intro />
       <Menu />
       <About />
-      <FixGapS />
+      <ClearTopS />
     </WrapperS>
   );
 };
