@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.div`
   padding: 15px;
   margin: 15px;
   @media (max-width: ${({ theme }) => theme.mobile}) {

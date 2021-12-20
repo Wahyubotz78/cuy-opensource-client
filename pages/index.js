@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NProgress from "nprogress";
-import HomeComponent from "components/Home";
+import Home from "components/Home";
 import Navbar from "components/Navbar";
 
 const HomePage = () => {
@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-      <HomeComponent />
+      <Home />
     </>
   );
 };

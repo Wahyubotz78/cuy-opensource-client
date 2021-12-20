@@ -4,13 +4,14 @@ import Intro from "./Intro";
 import Menu from "./Menu";
 import About from "./About";
 
-export default function Home() {
+const Home = () => {
   return (
     <Wrapper>
       <Intro />
       <Menu />
       <About />
-      <FixGap />
+      {/* <FixGap /> */}
     </Wrapper>
   );
-}
+};
+export default Home;
