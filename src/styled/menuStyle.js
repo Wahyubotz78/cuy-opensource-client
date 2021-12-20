@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ContainerMenu = styled.section`
   margin: auto;
   padding: 1rem;
-
   @media (min-width: 48em) {
     padding: 4rem;
   }
@@ -11,7 +10,6 @@ export const ContainerMenu = styled.section`
 
 export const HeaderMenu = styled.header`
   margin-bottom: 2rem;
-
   & h1 {
     font-size: clamp(1rem, 2vw, 99rem);
     font-weight: 300;
@@ -24,6 +22,7 @@ export const HeaderMenu = styled.header`
 
 export const MainMenu = styled.div`
   display: grid;
+  z-index: 1;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -34,6 +33,7 @@ export const MainMenu = styled.div`
     gap: 0;
     top: 0;
     left: 0;
+    border-bottom: 3px solid orange;
   }
 `;
 
@@ -57,6 +57,8 @@ export const Menu = styled.div`
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
+    color: #f7f7f7;
+    text-shadow: 5px 5px #222;
   }
   @media (max-width: ${({ theme }) => theme.mobile}) {
     img {
@@ -68,7 +70,6 @@ export const Menu = styled.div`
       font-size: 12px;
       font-weight: 300;
       padding: 5px;
-      color: #fff;
       letter-spacing: 0.1em;
       text-align: center;
       text-transform: uppercase;

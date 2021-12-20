@@ -10,8 +10,15 @@ body {
   font-family: 'Bakbak One', cursive;
   text-rendering: optimizeLegibility;
   width: 100%;
-  display: block;
-  margin: auto;
   min-height: 100vh;
   background: #F2F2F2;
+}
+
+.layout {
+  background-image: url('/images/pixels/bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
