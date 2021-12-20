@@ -51,6 +51,7 @@ export const CardInput = styled.input`
     width: 100%;
     font-family: inherit;
     font-size: 14px;
+    border-radius: 5px;
     border-top: 0;
     border-right: 0;
     border-bottom: 1px solid #ddd;
@@ -150,12 +151,13 @@ export const CardButton = styled.button`
 
 export const CardLink = styled.a`
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
+    color: #ff0000;
     text-decoration: none;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     transition: color 0.25s ease-in;
-    float: right;
+    float: center;
     &:hover {
         color: #777;
     }
