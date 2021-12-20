@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import PlaygroundPage from 'components/PlaygroundPage'
+import PlaygroundComponent from "components/Playground";
 const Playground = () => {
   useEffect(() => {
     NProgress.inc();
     NProgress.done();
-  }, [])
-  return (
-    <PlaygroundPage />
-  )
-}
+  }, []);
+  return <PlaygroundComponent />;
+};
 
-export default Playground
+export default Playground;

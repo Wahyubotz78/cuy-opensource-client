@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
   padding: 15px;
-  margin: 5px;
-  z-index: 999;
+  margin: 15px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 5px;
+    margin: 5px;
+  }
 `;
 
 export const FlexContainer = styled.section`

@@ -1,5 +1,7 @@
 export default {
   primaryDark: "#0D0C1D",
+  primaryBg: "#333",
+  primaryColor: "orange",
   primaryLight: "#FFFFFF",
   primaryHover: "orange",
   mobile: "576px",

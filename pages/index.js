@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
 import NProgress from "nprogress";
-import HomePage from "components/HomePage";
+import HomeComponent from "components/Home";
+import Navbar from "components/Navbar";
 
-const IndexPage = () => {
+const HomePage = () => {
   useEffect(() => {
     NProgress.inc();
     NProgress.done();
   }, []);
   return (
     <>
-      <HomePage />
+      <Navbar />
+      <HomeComponent />
     </>
   );
 };
 
-export default IndexPage;
+export default HomePage;
