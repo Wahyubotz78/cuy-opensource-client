@@ -6,18 +6,22 @@ import { App, SigninButton, RegisterButton } from "./staticFile";
 import NavbarBack from "../NavbarBack";
 import GoToHome from "../GoToHome";
 
-export default function Playground() {
+export default function Playground(props) {
   return (
     <Wrapper>
-      <NavbarBack />
-      <h1 style={{ marginTop: -3, textAlign: "center" }}>
-        <a
-          href="/playground"
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          PLAYGROUND
-        </a>
-      </h1>
+      { props.dashboard ? null : 
+        <>
+          <NavbarBack />
+          <h1 style={{ marginTop: -3, textAlign: "center" }}>
+            <a
+              href="/playground"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              PLAYGROUND
+            </a>
+          </h1>
+        </>
+      }
       <div id={9507}>
         <Sandpack
           template="react"
@@ -34,7 +38,7 @@ export default function Playground() {
           }}
         />
       </div>
-      <GoToHome />
+      { props.dashboard ? null : <GoToHome /> }
     </Wrapper>
   );
 }

@@ -30,7 +30,7 @@ export default function Navbar() {
           <a href="/course">course</a>
         </NavLink>
         <NavLink>
-          <a href="/">dashboard</a>
+          <a href="/dashboard">dashboard</a>
         </NavLink>
       </NavGroupRight>
     </NavContainer>

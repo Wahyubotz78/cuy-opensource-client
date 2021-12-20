@@ -3,7 +3,7 @@ import { CardWrapper, CardHeader, CardHeading, CardBody, CardIcon, CardFieldset,
 import { StyledModal, ModalWrapper } from '../../styled/popupStyle'
 import { thunk_register } from '../../redux/middleware/register/registerMiddleware'
 import { connect } from "react-redux";
-import { encryptRequest } from '../Helper/secret'
+import { encryptRequest } from '../../libs/secret'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = (props) => {
@@ -53,7 +53,9 @@ const Register = (props) => {
         }else if(type == 'email') {
             setEmail(data)
         }else if(type == 'no') {
-            setNohp(data)
+            if(data.length < 14 ){
+                setNohp(data.replace(/[^0-9]/g, ''))
+            }
         }else if(type == 'alamat') {
             setAlamat(data)
         }else if(type == 'password') {
@@ -73,6 +75,9 @@ const Register = (props) => {
         }else if(noHp == ''){
             setIsOpen(true)
             setMessage('no hp tidak boleh kosong')
+        }else if(noHp.length < 9 ){
+            setIsOpen(true)
+            setMessage('no hp terlalu pendek')
         }else if(alamat == ''){
             setIsOpen(true)
             setMessage('alamat tidak boleh kosong')
@@ -128,7 +133,7 @@ const Register = (props) => {
                         <CardInput placeholder="E-mail" type="text" required onChange={ (e) => changeInput(e.target.value,'email') }/>
                     </CardFieldset>
                     <CardFieldset>
-                        <CardInput placeholder="No Hp" type="number" required onChange={ (e) => changeInput(e.target.value,'no') }/>
+                        <CardInput placeholder="No Hp" type="text" required onChange={ (e) => changeInput(e.target.value,'no') } value={noHp}/>
                     </CardFieldset>
                     <CardFieldset>
                         <CardInput placeholder="Alamat" type="text" required onChange={ (e) => changeInput(e.target.value,'alamat') }/>
@@ -156,10 +161,10 @@ const Register = (props) => {
                         </CardOptions>
                     </CardFieldset> */}
                     <CardFieldset>
-                        <CardButton type="button" onClick={ (e) => daftar() }>{ props.registerReducer.Loading ? "Loading..." : "Daftar" }</CardButton>
+                        <CardButton type="button" onClick={ (e) => props.registerReducer.Loading ? null : daftar() }>{ props.registerReducer.Loading ? "Loading..." : "Daftar" }</CardButton>
                     </CardFieldset>
                     <CardFieldset>
-                        <CardLink onClick={ () => window.location = '/masuk' }>Udah punya akun? Klik disini</CardLink>
+                        Udah punya akun? <CardLink onClick={ () => window.location = '/masuk' }> Klik disini</CardLink>
                     </CardFieldset>
                 </CardBody>
             </CardWrapper>
