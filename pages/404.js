@@ -1,4 +1,4 @@
-import NotFoundPage from "components/NotFoundPage.js"
+import NotFoundComponent from "components/Helper/NotFound.js";
 export default function Custom404() {
-    return <NotFoundPage/>
-  }
+  return <NotFoundComponent />;
+}

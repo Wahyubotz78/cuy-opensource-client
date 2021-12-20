@@ -6,7 +6,7 @@ import { App, SigninButton, RegisterButton } from "./staticFile";
 import NavbarBack from "../NavbarBack";
 import GoToHome from "../GoToHome";
 
-export default function PlaygroundPage() {
+export default function Playground() {
   return (
     <Wrapper>
       <NavbarBack />
