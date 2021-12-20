@@ -18,6 +18,9 @@ export const BoxImage = styled.div`
   padding: 25px;
   text-align: center;
   border: 1px solid #f7f7f7;
+  :hover {
+    border: 1px solid orange;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -29,7 +32,11 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
   background-image: url(${({ background }) => background});
   max-width: 100%;
-  max-height: 100%;
+  max-width: 100%;
+  :hover {
+    transform: rotateZ(2deg);
+    transition: 0.5s;
+  }
 `;
 
 export const ImageTitle = styled.p`
