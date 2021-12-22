@@ -8,6 +8,7 @@ const IndexPage = () => {
     
   return (
     <Provider store={store}>
+      {/* <h1>ComingSoon</h1> */}
         <ModalProvider>
           <LoginPage />
         </ModalProvider>

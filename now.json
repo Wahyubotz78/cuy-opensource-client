@@ -2,12 +2,19 @@
   "name": "deacourse",
   "public": true,
   "version": 2,
-  "builds": [{
-    "src": "next.config.js",
-    "use": "@now/next"
-  }],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
   "alias": "deacourse.vercel.app",
   "env": {
-    "ADMIN_NUMBER": 6281285241889
+    "ADMIN_NUMBER": "6281285241889",
+    "MS_CONFIG": {
+      "url": "https://halocuy.ghost.io",
+      "key": "7dd8e89802e2a0004ff4db23b6",
+      "version": "v3"
+    }
   }
 }
