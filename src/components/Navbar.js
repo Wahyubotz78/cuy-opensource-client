@@ -6,24 +6,26 @@ import {
   NavLink,
 } from "styled/navStyle";
 
-export default function Navbar() {
+import { useRouter } from "next/router";
+
+export default function Navbar({ navigationData }) {
+  const router = useRouter();
+
   return (
     <NavContainer>
       <NavGroup>
-        <NavLink>
-          <a href="/" className="active">
-            home
-          </a>
-        </NavLink>
-        <NavLink>
-          <a href="/forum">forum</a>
-        </NavLink>
-        <NavLink>
-          <a href="/playground">playground</a>
-        </NavLink>
-        <NavLink>
-          <a href="/laederboard">ranking</a>
-        </NavLink>
+        {navigationData.map((nav, i) => {
+          return (
+            <NavLink key={i}>
+              <a
+                href={nav.url}
+                className={router.pathname == nav.url ? "active" : ""}
+              >
+                {nav.label}
+              </a>
+            </NavLink>
+          );
+        })}
       </NavGroup>
       <NavGroupRight>
         <NavLink>

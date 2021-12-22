@@ -30,5 +30,12 @@ export const getTagId = async (data) => {
 };
 
 export const getPostByTag = async (data) => {
-  return api.posts.browse({ filter: `tag:${data}+visibility:'public'`,  fields: "feature_image,title,html" });
+  return api.posts.browse({
+    filter: `tag:${data}+visibility:'public'`,
+    fields: "feature_image,title,html",
+  });
+};
+
+export const getSetting = async () => {
+  return api.settings.browse();
 };
