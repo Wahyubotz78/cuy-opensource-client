@@ -20,7 +20,9 @@ export default function Navbar({ navigationData }) {
             <NavLink key={i}>
               <a
                 href={getPathName(nav.url)}
-                className={router.pathname == nav.url ? "active" : ""}
+                className={
+                  router.pathname == getPathName(nav.url) ? "active" : ""
+                }
               >
                 {nav.label}
               </a>
