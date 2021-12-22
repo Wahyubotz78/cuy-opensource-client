@@ -4,12 +4,12 @@ import Intro from "./Intro";
 import Menu from "./Menu";
 import About from "./About";
 
-const Home = () => {
+const Home = ({aboutData}) => {
   return (
     <WrapperS>
       <Intro />
       <Menu />
-      <About />
+      <About data={aboutData}/>
       <ClearTopS />
     </WrapperS>
   );
