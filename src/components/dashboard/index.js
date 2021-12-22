@@ -13,7 +13,6 @@ import Playground from '../Playground/index'
 const Dashboard = (props) => {
     const [loadingPage, setLoadingPage] = useState(true)
     const [isOpened, setOpened] = useState(true);
-    console.log(props)
     useEffect( () => {
         if(sessionStorage.getItem('r') == null){
             window.location = '/masuk'

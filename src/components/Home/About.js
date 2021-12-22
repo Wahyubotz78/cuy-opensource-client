@@ -1,35 +1,33 @@
 import React from "react";
-import { WrapperS, BoxS } from "../../styled/global";
+import { WrapperS } from "styled/global";
 import {
-  ImageContainerS,
-  IconTitleS,
-  BoxIconS,
-  IconS,
-} from "../../styled/aboutStyle";
+  AboutContainerS,
+  AboutContentS,
+  AboutImageBoxS,
+  AboutImageS,
+} from "styled/aboutStyle";
+import { jsonRender } from "libs/jsonRenderer";
 
-export default function About() {
+export default function About({ datas }) {
   return (
     <WrapperS>
-      <BoxS>
-        <BoxIconS>
-          <ImageContainerS>
-            <IconS>💪</IconS>
-            <IconTitleS>Take Free Courses And Become A Self Learner</IconTitleS>
-          </ImageContainerS>
-        </BoxIconS>
-        <BoxIconS>
-          <ImageContainerS>
-            <IconS>🚀</IconS>
-            <IconTitleS>Achieve your goals and get certified</IconTitleS>
-          </ImageContainerS>
-        </BoxIconS>
-        <BoxIconS>
-          <ImageContainerS>
-            <IconS>🔖</IconS>
-            <IconTitleS>Chill with your friends in this tech vibes</IconTitleS>
-          </ImageContainerS>
-        </BoxIconS>
-      </BoxS>
+      {datas.map((about, i) => {
+        return (
+          <div key={i}>
+            <AboutImageBoxS>
+              <AboutImageS src={about.feature_image} />
+            </AboutImageBoxS>
+            <AboutContainerS>
+              <AboutContentS>
+                <h1>{about.title}</h1>
+              </AboutContentS>
+              <AboutContentS>
+                <div dangerouslySetInnerHTML={jsonRender(about.html)}></div>
+              </AboutContentS>
+            </AboutContainerS>
+          </div>
+        );
+      })}
     </WrapperS>
   );
 }
