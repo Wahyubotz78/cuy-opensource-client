@@ -10,21 +10,20 @@ export const CourseHeadingS = styled.h1`
 
 export const CourseCardContentS = styled.div`
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  display: flex;
-  max-width: 100%;
-  @media (max-width: 576px) {
-    max-width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-flow: column wrap;
+    justify-content: flex-start;
   }
 `;
 
 export const CourseCardInfoS = styled.div`
-  padding: 20px;
-  position: relative;
-  width: 100%;
   color: white;
-  @media (max-width: 576px) {
+  width: 31%;
+  margin: 5px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    width: 100%;
     padding: 16px;
   }
 `;
@@ -44,37 +43,47 @@ export const CourseDescriptionS = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  line-height: 1.9;
-  letter-spacing: 1.2px;
-  font-family: "Arial";
-  font-size: 16px;
-  font-weight: 400;
   padding: 20px;
+  height: auto;
   border-radius: 0 0 10px 10px;
   background: rgba(100, 100, 100, 0.2);
-`;
-
-export const CourseButtonCardS = styled.a`
-  background-color: orange;
-  border: 0;
-  border-radius: 50px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  color: #000;
-  font-size: 16px;
-  padding: 12px 25px;
-  cursor: pointer;
-  text-decoration: none;
-  position: absolute;
-  bottom: 15px;
-  right: 9px;
-  letter-spacing: 1px;
-  &:hover {
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
-    transform: translate(0, -1px);
+  p {
+    font-family: "Arial";
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-size: 1.2em;
+    margin: 0;
   }
-  @media (max-width: 576px) {
-    padding: 7px 16px;
-    bottom: 10px;
-    right: 10px;
+  figure {
+    width: 100%;
+  }
+  figure > img {
+    width: 100%;
+    height: 100%;
+  }
+  .kg-button-card {
+    background-color: orange;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 12px 25px;
+    cursor: pointer;
+    margin: 15px 0 15px auto;
+    &:hover {
+      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+      transform: translate(0, -1px);
+    }
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      margin: 10px auto;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+  a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 1px;
   }
 `;
