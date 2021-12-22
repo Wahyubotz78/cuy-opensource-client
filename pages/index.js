@@ -3,12 +3,12 @@ import NProgress from "nprogress";
 import Home from "components/Home";
 import Navbar from "components/Navbar";
 import { ClearTopS } from "styled/global";
-import { getPostByTag, getPageMenu, getSetting } from "libs/gcms";
+import { getPostByTag, getPageByTag, getSetting } from "libs/gcms";
 
 export const getStaticProps = async () => {
   const about = (await getPostByTag("about")) || "";
   const intro = (await getPostByTag("intro")) || "";
-  const menu = (await getPageMenu()) || "";
+  const menu = (await getPageByTag("menu")) || "";
   const { navigation } = (await getSetting()) || "";
 
   return {
@@ -21,8 +21,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const HomePage = (props) => {
-  const { intro, about, menu, navigation } = props;
+const HomePage = ({ intro, about, menu, navigation }) => {
   useEffect(() => {
     NProgress.inc();
     NProgress.done();
