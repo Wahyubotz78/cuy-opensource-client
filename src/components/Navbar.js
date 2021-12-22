@@ -5,25 +5,30 @@ import {
   NavGroupRight,
   NavLink,
 } from "styled/navStyle";
+import { getPathName } from "../libs/urlScraping";
 
-export default function Navbar() {
+import { useRouter } from "next/router";
+
+export default function Navbar({ navigationData }) {
+  const router = useRouter();
+
   return (
     <NavContainer>
       <NavGroup>
-        <NavLink>
-          <a href="/" className="active">
-            home
-          </a>
-        </NavLink>
-        <NavLink>
-          <a href="/forum">forum</a>
-        </NavLink>
-        <NavLink>
-          <a href="/playground">playground</a>
-        </NavLink>
-        <NavLink>
-          <a href="/laederboard">ranking</a>
-        </NavLink>
+        {navigationData.map((nav, i) => {
+          return (
+            <NavLink key={i}>
+              <a
+                href={getPathName(nav.url)}
+                className={
+                  router.pathname == getPathName(nav.url) ? "active" : ""
+                }
+              >
+                {nav.label}
+              </a>
+            </NavLink>
+          );
+        })}
       </NavGroup>
       <NavGroupRight>
         <NavLink>
