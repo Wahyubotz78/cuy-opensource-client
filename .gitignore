@@ -2,3 +2,6 @@ node_modules
 .env
 .next
 _static
+yarn.lock
+yarn-error.lock
+package-lock.json
