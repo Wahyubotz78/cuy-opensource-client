@@ -5,6 +5,7 @@ import {
   NavGroupRight,
   NavLink,
 } from "styled/navStyle";
+import { getPathName } from "../libs/urlScraping";
 
 import { useRouter } from "next/router";
 
@@ -18,8 +19,10 @@ export default function Navbar({ navigationData }) {
           return (
             <NavLink key={i}>
               <a
-                href={nav.url}
-                className={router.pathname == nav.url ? "active" : ""}
+                href={getPathName(nav.url)}
+                className={
+                  router.pathname == getPathName(nav.url) ? "active" : ""
+                }
               >
                 {nav.label}
               </a>
