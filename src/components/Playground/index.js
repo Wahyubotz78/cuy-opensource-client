@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Sandpack } from "@codesandbox/sandpack-react";
 import "@codesandbox/sandpack-react/dist/index.css";
-import { Wrapper } from "../../styled/global";
+import { WrapperS } from "../../styled/global";
 import { App, SigninButton, RegisterButton } from "./staticFile";
 import NavbarBack from "../NavbarBack";
 import GoToHome from "../GoToHome";
 
 export default function Playground(props) {
   return (
-    <Wrapper>
+    <WrapperS>
       { props.dashboard ? null : 
         <>
           <NavbarBack />
@@ -39,6 +39,6 @@ export default function Playground(props) {
         />
       </div>
       { props.dashboard ? null : <GoToHome /> }
-    </Wrapper>
+    </WrapperS>
   );
 }
