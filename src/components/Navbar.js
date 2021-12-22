@@ -1,17 +1,38 @@
 import React from "react";
 import {
-  StyledMenu
+  NavContainer,
+  NavGroup,
+  NavGroupRight,
+  NavLink,
 } from "../styled/navStyle";
 
-export default function Navbar({ open }) {
+export default function Navbar() {
   return (
-    <StyledMenu open={open}>
-      <a href="/playground">
-        playground
-      </a>
-      <a href="/masuk" as="button" id="join">
-        masuk
-      </a>
-    </StyledMenu>
+    <NavContainer>
+      <NavGroup>
+        <NavLink>
+          <a href="/" className="active">
+            home
+          </a>
+        </NavLink>
+        <NavLink>
+          <a href="/forum">forum</a>
+        </NavLink>
+        <NavLink>
+          <a href="/playground">playground</a>
+        </NavLink>
+        <NavLink>
+          <a href="/laederboard">ranking</a>
+        </NavLink>
+      </NavGroup>
+      <NavGroupRight>
+        <NavLink>
+          <a href="/course">course</a>
+        </NavLink>
+        <NavLink>
+          <a href="/dashboard">dashboard</a>
+        </NavLink>
+      </NavGroupRight>
+    </NavContainer>
   );
 }

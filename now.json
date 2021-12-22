@@ -1,13 +1,20 @@
 {
-  "name": "nextjs-redux-starter",
+  "name": "deacourse",
   "public": true,
   "version": 2,
-  "builds": [{
-    "src": "next.config.js",
-    "use": "@now/next"
-  }],
-  "alias": "nextjs-redux-starter.now.sh",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
+  "alias": "deacourse.vercel.app",
   "env": {
-    "GITHUB_API_ENDPOINT": "https://api.github.com"
+    "ADMIN_NUMBER": "6281285241889",
+    "MS_CONFIG": {
+      "url": "https://halocuy.ghost.io",
+      "key": "7dd8e89802e2a0004ff4db23b6",
+      "version": "v3"
+    }
   }
 }

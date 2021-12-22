@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import NProgress from "nprogress";
+import Home from "components/Home";
+import Navbar from "components/Navbar";
+import { ClearTopS } from "styled/global";
+import { getPostByTag } from "libs/gcms";
 
-import HomePage from 'components/HomePage'
-import Navbar from 'components/Navbar'
-const IndexPage = () => {
-  const [open, setOpen] = useState(false);
+export const getStaticProps = async () => {
+  const about = (await getPostByTag("about")) || "";
+  return {
+    props: { about },
+  };
+};
+
+const HomePage = (props) => {
+  const aboutData = props.about;
+  useEffect(() => {
+    NProgress.inc();
+    NProgress.done();
+  }, []);
+
   return (
     <>
-      <Navbar open={open} />
-      <HomePage open={open} setOpen={setOpen} />
+      <ClearTopS />
+      <Navbar />
+      <Home aboutData={aboutData} />
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default HomePage;
