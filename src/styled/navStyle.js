@@ -96,7 +96,7 @@ export const BackButton = styled.nav`
     a {
       text-decoration: none;
       font-size: 30px;
-      color: #444;
+      color: #fff;
       cursor: pointer;
     }
   }

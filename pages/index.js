@@ -1,19 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import NProgress from "nprogress";
 import Home from "components/Home";
 import Navbar from "components/Navbar";
 import { ClearTopS } from "styled/global";
-import { getPostByTag } from "libs/gcms";
+import { getPostByTag, getPageByTag, getSetting } from "libs/gcms";
 
 export const getStaticProps = async () => {
   const about = (await getPostByTag("about")) || "";
+  const intro = (await getPostByTag("intro")) || "";
+  const menu = (await getPageByTag("menu")) || "";
+  const { navigation } = (await getSetting()) || "";
+
   return {
-    props: { about },
+    props: {
+      intro,
+      about,
+      menu,
+      navigation,
+    },
   };
 };
 
-const HomePage = (props) => {
-  const aboutData = props.about;
+const HomePage = ({ intro, about, menu, navigation }) => {
   useEffect(() => {
     NProgress.inc();
     NProgress.done();
@@ -22,8 +30,8 @@ const HomePage = (props) => {
   return (
     <>
       <ClearTopS />
-      <Navbar />
-      <Home aboutData={aboutData} />
+      <Navbar navigationData={navigation} />
+      <Home introData={intro} aboutData={about} menuData={menu} />
     </>
   );
 };

@@ -1,8 +1,9 @@
 import React from "react";
-import { WrapperS, TitleS, DescriptionS } from "../../styled/global";
+import { WrapperS, TitleS, DescriptionS } from "styled/global";
 import Typist from "react-typist";
+import { jsonRender } from "libs/jsonRenderer";
 
-export default function Intro() {
+export default function Intro({ data }) {
   return (
     <WrapperS>
       <Typist
@@ -11,11 +12,10 @@ export default function Intro() {
         }}
         avgTypingDelay={150}
       >
-        <TitleS>HALO CUY.</TitleS>
+        <TitleS>{data[0].title}</TitleS>
       </Typist>
       <DescriptionS>
-        Virtualize Your
-        <span style={{ color: "orange", fontWeight: "bold" }}> Mind </span>
+        <div dangerouslySetInnerHTML={jsonRender(data[0].html)}></div>
       </DescriptionS>
     </WrapperS>
   );

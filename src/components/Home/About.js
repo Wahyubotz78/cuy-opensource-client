@@ -1,17 +1,17 @@
 import React from "react";
-import { WrapperS } from "../../styled/global";
+import { WrapperS } from "styled/global";
 import {
   AboutContainerS,
   AboutContentS,
   AboutImageBoxS,
   AboutImageS,
-} from "../../styled/aboutStyle";
-import { jsonRender } from "../../libs/jsonRenderer";
+} from "styled/aboutStyle";
+import { jsonRender } from "libs/jsonRenderer";
 
-export default function About({ data }) {
+export default function About({ datas }) {
   return (
     <WrapperS>
-      {data.map((about, i) => {
+      {datas.map((about, i) => {
         return (
           <div key={i}>
             <AboutImageBoxS>
