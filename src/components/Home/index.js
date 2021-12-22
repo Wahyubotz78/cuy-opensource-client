@@ -4,11 +4,11 @@ import Intro from "./Intro";
 import Menu from "./Menu";
 import About from "./About";
 
-const Home = ({ introData, aboutData }) => {
+const Home = ({ introData, aboutData, menuData }) => {
   return (
     <WrapperS>
       <Intro data={introData} />
-      <Menu />
+      <Menu datas={menuData} />
       <About datas={aboutData} />
       <ClearTopS />
     </WrapperS>
