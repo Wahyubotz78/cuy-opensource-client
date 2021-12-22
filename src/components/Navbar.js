@@ -4,7 +4,7 @@ import {
   NavGroup,
   NavGroupRight,
   NavLink,
-} from "../styled/navStyle";
+} from "styled/navStyle";
 
 export default function Navbar() {
   return (

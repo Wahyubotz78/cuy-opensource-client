@@ -1,4 +1,4 @@
-import config from "../libs/config";
+import config from "libs/config";
 const path = `https://api.whatsapp.com/send?phone=+${config.ADMIN_NUMBER}`;
 const path_demo = `https://api.whatsapp.com/send?phone=`;
 

@@ -1,13 +1,14 @@
 import React from "react";
-import { ContainerMenuS, MainMenuS, MenuS } from "../../styled/menuStyle";
-import { Popup } from "../../libs/popup";
+import { ContainerMenuS, MainMenuS, MenuS } from "styled/menuStyle";
+import { Popup } from "libs/popup";
+
 export default function NavigationMenu() {
   return (
     <ContainerMenuS>
       <MainMenuS>
         <MenuS>
           <img
-            src="/images/pixels/heart.png"
+            src={"/images/pixels/heart.png"}
             alt="💥"
             onClick={() => Popup()}
           />
