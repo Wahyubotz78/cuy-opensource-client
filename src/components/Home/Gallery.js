@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 
 SwiperCore.use([Navigation]);
 
-export default function Carousel() {
+export default function Gallery() {
   return (
     <WrapperS>
       <Title>GALLERY</Title>
