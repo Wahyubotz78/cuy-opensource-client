@@ -9,6 +9,16 @@ export const WrapperS = styled.div`
   }
 `;
 
+export const ReadMoreS = styled.div`
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: azure;
+  float: right;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+`;
+
 export const HtmlBoxS = styled.div`
   display: inline-block;
   width: 100%;
@@ -32,12 +42,13 @@ export const BoxS = styled.div`
 export const TitleS = styled.h1`
   text-align: center;
   text-transform: uppercase;
-  font-size: 225px;
+  font-size: 120px;
   color: #f7f7f7;
   text-shadow: -10px -2px; #FFF;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
+  margin-bottom: 100px;
   background-image: url("/images/mainbg.png");
   background-size: cover;
   -webkit-text-fill-color: transparent;
@@ -45,7 +56,8 @@ export const TitleS = styled.h1`
   -moz-background-clip: text;
   background-clip: text;
   @media screen and (max-width: 768px) {
-    font-size: 125px;
+    font-size: 55px;
+    margin-bottom: 50px;
   }
 `;
 
@@ -67,8 +79,6 @@ export const ClearTopS = styled.div`
   margin-top: 100px;
 `;
 
-
 export const ClearBotS = styled.div`
   margin-bottom: 100px;
 `;
-

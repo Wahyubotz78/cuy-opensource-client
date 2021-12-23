@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CourseRootS = styled.div`
+export const CourseRootS = styled.section`
   display: flex;
   justify-content: space-evenly;
   letter-spacing: 1px;
@@ -47,9 +47,9 @@ export const CourseDescriptionS = styled.div`
     width: 100%;
   }
 
-  figure > img {
-    width: 100%;
-    height: 100%;
+  img {
+    max-width: 100%;
+    height: auto;
   }
 
   .kg-button-card {

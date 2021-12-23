@@ -19,11 +19,11 @@ export const AboutContainerS = styled.div`
 export const AboutContentS = styled.div`
   color: white;
   font-size: 1.5em;
-  margin: 10px;
   h1 {
     text-align: center;
     letter-spacing: 0.15em;
-    font-size: 2.5em;
+    margin-top: 50px;
+    margin-bottom: -5px;
   }
   div {
     background: rgba(0, 0, 0, 0.1);
@@ -35,5 +35,6 @@ export const AboutContentS = styled.div`
     letter-spacing: 0.12em;
     line-height: 1.25;
     font-family: "Arial";
+    font-size: 1em;
   }
 `;
