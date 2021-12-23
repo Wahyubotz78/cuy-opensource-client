@@ -28,10 +28,9 @@ export const CourseDetailS = styled.div`
 export const CourseDescriptionS = styled.div`
   padding: 20px;
   border-radius: 0 0 10px 10px;
-  background: rgba(100, 100, 100, 0.2);
+  background: rgba(20, 20, 20, 0.7);
   border-bottom: 2px solid orange;
   border-radius: 0px 0px 20px 20px;
-  overflow: hidden;
 
   p, code, pre {
     font-family: "Arial";
@@ -39,6 +38,7 @@ export const CourseDescriptionS = styled.div`
     line-height: 1.5;
     letter-spacing: 0.05em;
     font-size: 1.2em;
+    white-space: pre-wrap;
   }
 
   figure {
@@ -79,7 +79,7 @@ export const CourseDescriptionS = styled.div`
       width: 100%;
     }
     p, code, pre {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 `;
@@ -92,7 +92,7 @@ export const CourseHeadingS = styled.h1`
   padding: 10px;
 `;
 
-export const CourseTitleS = styled.h3`
+export const CourseTitleS = styled.h2`
   letter-spacing: 1px;
   font-weight: 400;
   color: azure;
