@@ -6,6 +6,7 @@ import store from "redux/store";
 import Layout from "components/Layout";
 import theme from "theme";
 import "components/styles/main.css";
+import "components/styles/gallery.css";
 import "babel-polyfill";
 
 const GlobalStyle = createGlobalStyle`
