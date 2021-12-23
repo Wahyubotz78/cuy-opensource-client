@@ -66,3 +66,9 @@ export const DescriptionS = styled.div`
 export const ClearTopS = styled.div`
   margin-top: 100px;
 `;
+
+
+export const ClearBotS = styled.div`
+  margin-bottom: 100px;
+`;
+
