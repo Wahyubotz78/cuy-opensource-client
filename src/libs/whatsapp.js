@@ -2,8 +2,11 @@ import config from "libs/config";
 const path = `https://api.whatsapp.com/send?phone=+${config.ADMIN_NUMBER}`;
 const path_demo = `https://api.whatsapp.com/send?phone=`;
 
-export const whatsapp = (nama, email, nomor, kota, course) => {
-  return (window.location.href = `${path}&text=Hi%20bang%2C%20daftar%20course%20${course}:%0A%0Anama:%20${nama}%0Aemail:%20${email}%0Anomor-telepon:%20${nomor}%0Aasal-kota:%20${kota}%0A%0A%0Athanks.`);
+export const whatsapp = (nama, email, nomor, profesi, course) => {
+  return window.open(
+    `${path}&text=Hi%20bang%2C%20daftar%20course%20${course}:%0A%0Anama:%20${nama}%0Aemail:%20${email}%0Anomor-telepon:%20${nomor}%0Aprofesi:%20${profesi}%0A%0A%0Athanks.`,
+    "_blank"
+  );
 };
 
 export const whatsappDemo = (
