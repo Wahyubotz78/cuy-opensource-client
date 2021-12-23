@@ -9,6 +9,14 @@ export const WrapperS = styled.div`
   }
 `;
 
+export const HtmlBoxS = styled.div`
+  display: inline-block;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+`;
+
 export const BoxS = styled.div`
   display: flex;
   background-color: #222;
