@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import PlaygroundComponent from "components/Playground";
+import CourseRegistration from "components/Course/registration";
 import { getSetting } from "libs/gcms";
 
 export const getStaticProps = async () => {
   const { navigation } = (await getSetting()) || "";
-
   return {
     props: {
       navigation,
@@ -12,12 +11,12 @@ export const getStaticProps = async () => {
   };
 };
 
-const Playground = () => {
+export default function CourseRegistrationPage({ navigation }) {
   useEffect(() => {
     NProgress.inc();
     NProgress.done();
   }, []);
-  return <PlaygroundComponent />;
-};
-
-export default Playground;
+  return (
+    <CourseRegistration registrationData={""} navigationData={navigation} />
+  );
+}

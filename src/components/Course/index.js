@@ -1,33 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CourseHeadingS,
-  CourseCardContentS,
-  CourseTitleS,
+  CourseDetailS,
   CourseDescriptionS,
-  CourseCardInfoS,
+  CourseRootS,
+  CourseTitleS,
 } from "styled/courseStyle";
-import GoToHome from "../GoToHome";
+import ReadMore from "components/Helper/ReadMore";
 import { jsonRender } from "libs/jsonRenderer";
 
 export default function Course({ courseData }) {
+  return <CourseList courseDatas={courseData} />;
+}
+
+const CourseItem = (props) => {
+  const defaultTextLength = 992;
+  const [isReadMore, setReadMore] = useState(false);
   return (
-    <div>
+    <CourseDetailS>
+      <CourseTitleS>{props.title}</CourseTitleS>
+      <CourseDescriptionS
+        dangerouslySetInnerHTML={
+          isReadMore
+            ? jsonRender(props.html)
+            : jsonRender(props.html.slice(0, defaultTextLength))
+        }
+      />
+      {props.html.includes("COMING SOON") ? (
+        ""
+      ) : (
+        <ReadMore isReadMore={isReadMore} setReadMore={setReadMore} />
+      )}
+    </CourseDetailS>
+  );
+};
+
+const CourseList = ({ courseDatas }) => {
+  return (
+    <div style={{ marginBottom: 100 }}>
       <CourseHeadingS>Available Courses</CourseHeadingS>
-      <CourseCardContentS>
-        {courseData.map((data, i) => {
-          return (
-            <CourseCardInfoS key={i}>
-              <CourseTitleS>
-                {data.title} | {data.meta_description}
-              </CourseTitleS>
-              <CourseDescriptionS
-                dangerouslySetInnerHTML={jsonRender(data.html)}
-              ></CourseDescriptionS>
-            </CourseCardInfoS>
-          );
-        })}
-      </CourseCardContentS>
-      <GoToHome />
+      <CourseRootS>
+        {courseDatas.map((courseData, _) => (
+          <CourseItem {...courseData} key={_} />
+        ))}
+      </CourseRootS>
     </div>
   );
-}
+};
