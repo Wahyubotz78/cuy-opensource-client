@@ -40,4 +40,5 @@
 
 .swiper-slide-next img {
   filter: contrast(100%);
+  cursor: pointer;
 }
