@@ -13,7 +13,12 @@ export default function Gallery() {
   return (
     <WrapperS>
       <Title>GALLERY</Title>
-      <Swiper slidesPerView={3} spaceBetween={30} loop={true} navigation={true}>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={100}
+        loop={true}
+        navigation={true}
+      >
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
         </SwiperSlide>
