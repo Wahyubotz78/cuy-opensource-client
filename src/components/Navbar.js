@@ -32,10 +32,12 @@ export default function Navbar({ navigationData }) {
       </NavGroup>
       <NavGroupRight>
         <NavLink>
-          <a href="/course">course</a>
+          <a href="/course" style={{ border: "2px solid orange" }}>
+            Kelas
+          </a>
         </NavLink>
         <NavLink>
-          <a href="/dashboard">dashboard</a>
+          <a href="/dashboard">Pintu Masuk</a>
         </NavLink>
       </NavGroupRight>
     </NavContainer>

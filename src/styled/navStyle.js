@@ -60,6 +60,7 @@ export const NavLink = styled.li`
     box-shadow: inset -2px -4px #0006, inset 2px 2px #fff7;
     cursor: pointer;
   }
+  
   a:hover {
     opacity: 1;
     text-shadow: 2px 2px #202013cc;
