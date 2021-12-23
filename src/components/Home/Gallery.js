@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { WrapperS } from "styled/global";
 import { Title } from "../../styled/carouselStyle";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,13 +9,21 @@ import "swiper/css/navigation";
 
 SwiperCore.use([Navigation]);
 
-export default function Gallery() {
+const Gallery = () => {
+  const [isMobile, setMobile] = useState(false);
+  const [getSpaceBetween, setSpaceBetween] = useState(100);
+
+  useEffect(() => {
+    setMobile(window.matchMedia("(max-width: 600px)").matches);
+    setSpaceBetween(isMobile ? 15 : 100);
+  }, [getSpaceBetween, isMobile]);
+
   return (
     <WrapperS>
       <Title>GALLERY</Title>
       <Swiper
         slidesPerView={3}
-        spaceBetween={100}
+        spaceBetween={getSpaceBetween}
         loop={true}
         navigation={true}
       >
@@ -49,4 +57,6 @@ export default function Gallery() {
       </Swiper>
     </WrapperS>
   );
-}
+};
+
+export default Gallery;
