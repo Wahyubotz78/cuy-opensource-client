@@ -36,7 +36,7 @@ const Dashboard = (props) => {
 
     return (
         <Container>
-            { loadingPage ? <SpinnerPage /> :  
+            { loadingPage ? <SpinnerPage width="100px" height="100px"/> :  
                 <>
                     <Header isOpened={isOpened} toggleDrawer={toggleDrawer} title={props.dashboardReducer.sidebar}/>
                     <Content>

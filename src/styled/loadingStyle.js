@@ -39,7 +39,7 @@ export const SpinnerPage = styled.div`
   border-bottom: 2px solid grey;
   border-left: 4px solid black;
   background: transparent;
-  width: 100px;
-  height: 100px;
+  width: ${props => props.width};
+  height: ${props => props.height};
   border-radius: 50%;
 `;

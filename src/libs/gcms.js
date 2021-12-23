@@ -9,8 +9,8 @@ const api = new GhostContentAPI({
 export const getPageByTag = async (data) => {
   return api.pages.browse({
     tag: data,
-    filter: "visibility:'public'",
-    fields: "title,feature_image, html",
+    filter: `tag:${data}`,
+    fields: "title,feature_image, html, custom_excerpt",
   });
 };
 

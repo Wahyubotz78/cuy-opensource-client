@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
+import NProgress from "nprogress";
 import { Provider } from "react-redux";
-import store from '../../src/redux/store'
-import { ModalProvider } from 'styled-react-modal'
-import LoginPage from '../../src/components/Login'
+import store from 'redux/store';
+import { ModalProvider } from 'styled-react-modal';
+import LoginPage from 'components/Login';
+import { getPostByTag, getPageByTag } from "libs/gcms";
 
-const IndexPage = () => {
-    
+export const getStaticProps = async () => {
+  const login = (await getPostByTag("login")) || "";
+  const text = (await getPageByTag("login")) || "";
+
+  return {
+    props: {
+      login,
+      text,
+    },
+  };
+};
+
+const IndexPage = ({login, text}) => {
+
+  useEffect(() => {
+    NProgress.inc();
+    NProgress.done();
+  }, []);
+  
   return (
     <Provider store={store}>
-      {/* <h1>ComingSoon</h1> */}
         <ModalProvider>
-          <LoginPage />
+          <LoginPage title={login} text={text}/>
         </ModalProvider>
     </Provider>
   )
