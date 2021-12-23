@@ -6,7 +6,6 @@ import {
   CourseRootS,
   CourseTitleS,
 } from "styled/courseStyle";
-import GoToHome from "../GoToHome";
 import { jsonRender } from "libs/jsonRenderer";
 
 export default function Course({ courseData }) {
@@ -25,7 +24,6 @@ export default function Course({ courseData }) {
           );
         })}
       </CourseRootS>
-      <GoToHome />
     </div>
   );
 }

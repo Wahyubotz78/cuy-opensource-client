@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import CourseRegistration from "components/Course/registration";
-import { getPostByTag, getSetting } from "libs/gcms";
+import { getSetting } from "libs/gcms";
 
 export const getStaticProps = async () => {
   const { navigation } = (await getSetting()) || "";

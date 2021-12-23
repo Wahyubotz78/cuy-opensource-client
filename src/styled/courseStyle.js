@@ -96,6 +96,15 @@ export const CourseHeadingS = styled.h1`
   padding: 10px;
 `;
 
+export const CourseMessageS = styled.p`
+  text-align: center;
+  color: azure;
+  font-family: "Arial";
+  font-style: italic;
+  margin-top: -20px;
+  margin-bottom: 30px;
+`;
+
 export const CourseTitleS = styled.h2`
   letter-spacing: 1px;
   font-weight: 400;
