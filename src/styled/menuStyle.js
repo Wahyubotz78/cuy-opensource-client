@@ -30,7 +30,19 @@ export const MainMenuS = styled.div`
     gap: 0;
     top: 0;
     left: 0;
-    border-bottom: 3px solid orange;
+    border-image-slice: 1;
+    border-bottom-width: 2px;
+    border-bottom: 2px solid;
+    border-image-source: linear-gradient(to right, #fff00d, #ffa500);
+    animation: animateBorder 1s infinite;
+  }
+  @keyframes animateBorder {
+    from {
+      border-image-source: linear-gradient(to right, #743ad5, #ffa500);
+    }
+    to {
+      border-image-source: linear-gradient(to right, #ffa500, #743ad5);
+    }
   }
 `;
 
