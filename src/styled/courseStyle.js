@@ -5,33 +5,28 @@ export const CourseRootS = styled.section`
   justify-content: space-evenly;
   letter-spacing: 1px;
   font-weight: 400;
+  min-width: 100%;
   color: azure;
-  margin: 20px;
-  padding: 10px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
-    margin: 5px;
-    padding: 2.5px;
   }
 `;
 export const CourseDetailS = styled.div`
-  margin: 20px;
-  padding: 10px;
+  max-width: 100%;
+  margin: 10px;
+  padding: 20px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     margin: 5px;
-    padding: 2.5px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    padding: 10px;
   }
 `;
 
 export const CourseDescriptionS = styled.div`
-  padding: 20px;
   border-radius: 0 0 10px 10px;
   background: rgba(20, 20, 20, 0.7);
   border-bottom: 2px solid orange;
   border-radius: 0px 0px 20px 20px;
-
+  padding: 20px;
   p,
   code,
   pre {
@@ -44,7 +39,7 @@ export const CourseDescriptionS = styled.div`
   }
 
   figure {
-    width: 100%;
+    max-width: 100%;
   }
 
   img {
@@ -55,6 +50,7 @@ export const CourseDescriptionS = styled.div`
   .kg-button-card {
     background-color: orange;
     border-radius: 50px;
+    max-width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     padding: 12px 25px;
     cursor: pointer;
@@ -75,10 +71,9 @@ export const CourseDescriptionS = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 10px;
-    width: 100%;
+    max-width: 100%;
     .kg-button-card {
       margin: 10px auto;
-      width: 100%;
     }
     p,
     code,
@@ -111,7 +106,7 @@ export const CourseTitleS = styled.h2`
   color: azure;
   background: rgba(22, 22, 22, 0.9);
   text-align: center;
-  padding: 10px;
+  padding: 30px;
   border-bottom: 2px solid orange;
   border-radius: 20px 20px 0 0;
 `;
