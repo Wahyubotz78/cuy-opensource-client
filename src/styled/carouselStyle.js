@@ -10,7 +10,7 @@ export const zoom = keyframes`
 `;
 
 export const Title = styled.h1`
-  font-family: var(--pixel-font);
+  font-family: var(--bakbak-font);
   text-align: center;
   text-transform: uppercase;
   color: white;
