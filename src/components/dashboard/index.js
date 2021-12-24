@@ -13,6 +13,7 @@ import Playground from '../Playground/index'
 const Dashboard = (props) => {
     const [loadingPage, setLoadingPage] = useState(true)
     const [isOpened, setOpened] = useState(true);
+    console.log(props)
     useEffect( () => {
         if(sessionStorage.getItem('r') == null){
             window.location = '/masuk'
@@ -21,14 +22,14 @@ const Dashboard = (props) => {
             sessionStorage.clear()
             window.location = '/masuk'
         }
-        if(props.userReducer.data == null){
+        if(props.userReducer.data == null && sessionStorage.getItem('r') != null){
             let userLogin = decryptRequest(sessionStorage.getItem('r'))
             let ecryptID = encryptRequest({"id": userLogin.id})
             thunk_getUser(ecryptID)
         }else {
             setLoadingPage(false)
         }
-    }, [props.userReducer])
+    }, [props.userReducer.data])
 
     const toggleDrawer = () => {
         setOpened((prev) => !prev);
