@@ -19,9 +19,5 @@ body {
   text-rendering: optimizeLegibility;
   width: 100%;
   min-height: 100vh;
-  background-image: url("/images/secondary-bg.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #333;
 }
