@@ -16,7 +16,7 @@ export const ModalContainer = styled.div`
 `;
 
 export const ModalPopup = styled.div`
-	z-index: auto;
+	z-index: 11;
 	display: ${({ show }) => (show ? 'flex' : 'none')};
 	position: fixed;
     justify-content: center;

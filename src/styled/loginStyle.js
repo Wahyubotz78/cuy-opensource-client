@@ -4,6 +4,7 @@ export const CardWrapper = styled.div`
     overflow: hidden;
     padding: 0 0 32px;
     margin: 48px auto 0;
+    background: #fff;
     width: 400px;
     font-family: Quicksand, arial, sans-serif;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
@@ -51,6 +52,7 @@ export const CardInput = styled.input`
     width: 100%;
     font-family: inherit;
     font-size: 14px;
+    border-radius: 5px;
     border-top: 0;
     border-right: 0;
     border-bottom: 1px solid #ddd;
@@ -150,12 +152,13 @@ export const CardButton = styled.button`
 
 export const CardLink = styled.a`
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
+    color: #ff0000;
     text-decoration: none;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     transition: color 0.25s ease-in;
-    float: right;
+    float: center;
     &:hover {
         color: #777;
     }

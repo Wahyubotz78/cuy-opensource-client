@@ -1,18 +1,45 @@
 import React from "react";
-import { StyledMenu } from "../styled/navStyle";
+import {
+  NavContainer,
+  NavGroup,
+  NavGroupRight,
+  NavLink,
+} from "styled/navStyle";
+import { getPathName } from "../libs/urlScraping";
 
-export default function Navbar({ open }) {
+import { useRouter } from "next/router";
+
+export default function Navbar({ navigationData }) {
+  const router = useRouter();
+
   return (
-    <StyledMenu open={open}>
-      <div style={{ marginTop: 10 }}>
-        <a href="/course">course</a>
-        <a href="/playground">playground</a>
-      </div>
-      <div id="join">
-        <a href="#" as="button">
-          devmode
-        </a>
-      </div>
-    </StyledMenu>
+    <NavContainer>
+      <NavGroup>
+        {navigationData.map((nav, i) => {
+          return (
+            <NavLink key={i}>
+              <a
+                href={getPathName(nav.url)}
+                className={
+                  router.pathname == getPathName(nav.url) ? "active" : ""
+                }
+              >
+                {nav.label}
+              </a>
+            </NavLink>
+          );
+        })}
+      </NavGroup>
+      <NavGroupRight>
+        <NavLink>
+          <a href="/course" style={{ border: "2px solid orange" }}>
+            Kelas
+          </a>
+        </NavLink>
+        <NavLink>
+          <a href="/dashboard">Pintu Masuk</a>
+        </NavLink>
+      </NavGroupRight>
+    </NavContainer>
   );
 }

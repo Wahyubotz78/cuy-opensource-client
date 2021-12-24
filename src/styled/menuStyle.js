@@ -1,19 +1,13 @@
 import styled from "styled-components";
 
-export const ContainerMenu = styled.section`
+export const ContainerMenuS = styled.section`
   margin: auto;
   padding: 1rem;
-
-  @media (min-width: 48em) {
-    padding: 4rem;
-  }
 `;
 
-export const HeaderMenu = styled.header`
+export const HeaderMenuS = styled.header`
   margin-bottom: 2rem;
-
   & h1 {
-    color: var(--color-heading);
     font-size: clamp(1rem, 2vw, 99rem);
     font-weight: 300;
     letter-spacing: 0.1875em;
@@ -23,47 +17,61 @@ export const HeaderMenu = styled.header`
   }
 `;
 
-export const MainMenu = styled.div`
+export const MainMenuS = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  z-index: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
-  @media (min-width: 35.5em) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0 2rem;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    background-image: url("/images/mainbg.png");
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    gap: 0;
+    top: 0;
+    left: 0;
+    border-bottom: 3px solid orange;
   }
 `;
 
-export const Menu = styled.div`
-  background: #0D0C1D;
-  border-radius: 1rem;
-  color: var(--color-counter);
+export const MenuS = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: clamp(1rem, 8vw, 99rem);
-  font-weight: 100;
-  line-height: 1;
-  padding: 2vw
-  text-align: center;
-  color: #f7f7f7;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+  padding: 1vw;
+  img {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+  }
   h2 {
-    color: var(--color-heading);
     font-size: clamp(1rem, 2vw, 99rem);
     font-weight: 300;
-    letter-spacing: .1875em;
-    order: 1;
+    padding: 10px;
+    letter-spacing: 0.2em;
     text-align: center;
-    overflow: hidden
-    text-overflow: ellipsis;
     text-transform: uppercase;
     white-space: nowrap;
-    width: 100%;
+    color: #f7f7f7;
+    text-shadow: 5px 5px #222;
+    cursor: pointer;
   }
-  &:hover{
-    background-color:orange;
-    transition: color 0.2s linear;
-    color: #0D0C1D;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    img {
+      width: 50%;
+      height: 50%;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 12px;
+      font-weight: 300;
+      padding: 5px;
+      letter-spacing: 0.1em;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
   }
 `;

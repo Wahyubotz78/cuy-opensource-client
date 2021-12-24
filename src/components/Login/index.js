@@ -7,34 +7,37 @@ import {
     CardIcon,
     CardFieldset,
     CardInput,
-    CardOptionsItem,
-    CardOptions,
-    CardOptionsNote,
     CardButton,
     CardLink
-} from "../../styled/loginStyle";
-import { StyledModal, ModalWrapper } from '../../styled/popupStyle'
-import { thunk_login } from '../../redux/middleware/login/loginMiddleware'
+} from "styled/loginStyle";
+import { StyledModal, ModalWrapper } from 'styled/popupStyle';
+import { SpinnerPage } from 'styled/loadingStyle';
+import { Container } from 'styled/dashboardStyle';
+import { thunk_login } from 'redux/middleware/login/loginMiddleware';
 import { connect } from "react-redux";
-import { encryptRequest, decryptRequest } from '../Helper/secret'
+import { encryptRequest } from 'libs/secret';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = (props) => {
+
     const [typePassword, setTypePassword] = useState('password');
-    const [email, setEmail] = useState('');
+    const [noHp, setNoHp] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     const [isOpen, setIsOpen] = useState(false);
+    const [loadingPage, setLoadingPage] = useState(true);
 
     useEffect(() => {
         if(sessionStorage.getItem('r') != null){
             window.location = '/dashboard'
+        }else{
+            setLoadingPage(false)
         }
         if(props.loginReducer.data != null){
             sessionStorage.setItem('r', props.loginReducer.data)
             window.location = '/dashboard'
         }else if(props.loginReducer.Error){
-            setMessage('Email atau password salah')
+            setMessage('No Telepon atau Password salah')
             setIsOpen(true)
         }
     }, [props.loginReducer])
@@ -48,23 +51,25 @@ const Login = (props) => {
     }
 
     const changeInput = (data,type) => {
-        if(type == 'email') {
-            setEmail(data)
-        }else if(type == 'password') {
+        if(type == 'No Telepon') {
+            if(data.length < 14){
+                setNoHp(data.replace(/[^0-9]/g, ''))
+            }
+        }else if(type == 'Password') {
             setPassword(data)
         }
     }
 
     const login = () => {
-        if(email == ''){
-            setMessage('Email tidak boleh kosong')
+        if(noHp == ''){
+            setMessage('No Telepon tidak boleh kosong')
             setIsOpen(true)
         }else if(password == '' ){
             setMessage('Password tidak boleh kosong')
             setIsOpen(true)
         }else{
             const dataLogin = {
-                key: email,
+                key: noHp,
                 password: password
             }
             const data = encryptRequest(dataLogin)
@@ -73,56 +78,51 @@ const Login = (props) => {
     }
 
     return (
-        <>
-            <StyledModal
-                isOpen={isOpen}
-            >
-                <ModalWrapper>
-                    <CardHeader>
-                        <CardHeading>
-                            { message }
-                        </CardHeading>
-                    </CardHeader>
-                    <CardBody>
-                        <CardButton type="button" onClick={ () => setIsOpen(false)  }>Tutup</CardButton>
-                    </CardBody>
-                </ModalWrapper>
-            </StyledModal>
-            <CardWrapper>
-                <CardHeader>
-                    <CardHeading>Login</CardHeading>
-                </CardHeader>
-                <CardBody>
-                    <CardFieldset>
-                        <CardInput placeholder="E-mail" type="text" onChange={ (e) => changeInput(e.target.value, 'email') } required />
-                    </CardFieldset>
-                    <CardFieldset>
-                        <CardInput placeholder="Password" type={typePassword} onChange={ (e) => changeInput(e.target.value, 'password') } required />
-                        <CardIcon eye small onClick={ () => showPassword() }>{ typePassword === 'password' ? <FaEye /> : <FaEyeSlash /> }</CardIcon>
-                    </CardFieldset>
-                    {/* <CardFieldset>
-                        <CardOptionsNote>Login google</CardOptionsNote>
-                        <CardOptions>
-                            <CardOptionsItem>
-                                <CardIcon className="fab fa-google" big />
-                            </CardOptionsItem>
-                            <CardOptionsItem>
-                                <CardIcon className="fab fa-twitter" big />
-                            </CardOptionsItem>
-                            <CardOptionsItem>
-                                <CardIcon className="fab fa-facebook" big />
-                            </CardOptionsItem>
-                        </CardOptions>
-                    </CardFieldset> */}
-                    <CardFieldset>
-                        <CardButton type="button" onClick={ () => login() }>{ props.loginReducer.Loading ? 'Loading...' : 'Login' }</CardButton>
-                    </CardFieldset>
-                    <CardFieldset>
-                        <CardLink onClick={ () => window.location = '/daftar' }>Belum punya akun? Klik disini</CardLink>
-                    </CardFieldset>
-                </CardBody>
-            </CardWrapper>
-        </>
+        <Container>
+            { loadingPage ? <SpinnerPage width="100px" height="100px"/> : 
+                <>
+                    <StyledModal
+                        isOpen={isOpen}
+                    >
+                        <ModalWrapper>
+                            <CardHeader>
+                                <CardHeading>
+                                    { message }
+                                </CardHeading>
+                            </CardHeader>
+                            <CardBody>
+                                <CardButton type="button" onClick={ () => setIsOpen(false)  }>Tutup</CardButton>
+                            </CardBody>
+                        </ModalWrapper>
+                    </StyledModal>
+                    <CardWrapper>
+                        <CardHeader>
+                            <CardHeading>{ props.title[0].title }</CardHeading>
+                        </CardHeader>
+                        <CardBody>
+                            { props.text.map( (data,i) => {
+                                return (
+                                    <React.Fragment key={i}>
+                                        <CardFieldset>
+                                            <CardInput placeholder={ data.title } type={ data.custom_excerpt == 'password' ? typePassword : data.custom_excerpt} onChange={ (e) => changeInput(e.target.value, data.title) } value={ data.title == 'No Telepon' ? noHp : undefined } required />
+                                            { data.custom_excerpt == 'password' ? 
+                                            <CardIcon eye small onClick={ () => showPassword() }>{ typePassword === 'password' ? <FaEye /> : <FaEyeSlash /> }</CardIcon>
+                                            : null }
+                                        </CardFieldset>
+                                    </React.Fragment>
+                                )
+                            })}
+                            <CardFieldset>
+                                <CardButton type="button" onClick={ () => props.loginReducer.Loading ? null : login() }>{ props.loginReducer.Loading ? <SpinnerPage width="15px" height="15px"/> : props.title[0].title }</CardButton>
+                            </CardFieldset>
+                            <CardFieldset>
+                                { props.title[0].excerpt.slice(0, 18) } <CardLink onClick={ () => window.location = '/daftar' }>{ props.title[0].excerpt.slice(18, 30) }</CardLink>
+                            </CardFieldset>
+                        </CardBody>
+                    </CardWrapper>
+                </>
+            }
+        </Container>
     )
 }
 

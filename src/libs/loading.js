@@ -1,5 +1,5 @@
 import React from "react";
-import { Dot, DotWrapper } from '../../styled/loadingStyle';
+import { Dot, DotWrapper } from 'styled/loadingStyle';
 
 const Loading = () => {
 

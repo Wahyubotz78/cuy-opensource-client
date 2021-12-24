@@ -1,18 +1,28 @@
 import React from "react";
 import { Provider } from "react-redux";
-import store from '../../src/redux/store'
-import DashboardPage from '../../src/components/dashboard';
-import { ModalProvider } from 'styled-react-modal'
+import store from "../../src/redux/store";
+import DashboardPage from "../../src/components/dashboard";
+import { ModalProvider } from "styled-react-modal";
+import { getSetting } from "libs/gcms";
 
-const IndexPage = () => {    
+export const getStaticProps = async () => {
+  const { navigation } = (await getSetting()) || "";
+
+  return {
+    props: {
+      navigation,
+    },
+  };
+};
+
+const IndexPage = () => {
   return (
     <Provider store={store}>
-      <h1>ComingSoon</h1>
-        {/* <ModalProvider>
-          <DashboardPage />
-        </ModalProvider> */}
+      <ModalProvider>
+        <DashboardPage />
+      </ModalProvider>
     </Provider>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

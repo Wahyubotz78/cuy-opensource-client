@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins:ital,wght@0,300;0,400;0,500;1,800&family=Press+Start+2P&display=swap");
+
+:root {
+  --pixel-font: "Press Start 2P", cursive;
+  --bakbak-font: "Bakbak One", cursive;
+  --poppins-font: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Bakbak One", cursive;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #333;
+}

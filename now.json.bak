@@ -1,0 +1,18 @@
+{
+  "name": "deacourse",
+  "public": true,
+  "version": 2,
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
+  "alias": "deacourse.vercel.app",
+  "env": {
+    "ADMIN_NUMBER": "6281285241889",
+   "GCMS_URL":"https://halocuy.ghost.io",
+	"GCMS_KEY":"7dd8e89802e2a0004ff4db23b6",
+	"GCMS_VERSION":"v3"
+  }
+}

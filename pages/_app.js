@@ -5,7 +5,8 @@ import styledNormalize from "styled-normalize";
 import store from "redux/store";
 import Layout from "components/Layout";
 import theme from "theme";
-import "../styles/main.css";
+import "components/styles/main.css";
+import "components/styles/gallery.css";
 import "babel-polyfill";
 
 const GlobalStyle = createGlobalStyle`

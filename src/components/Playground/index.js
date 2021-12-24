@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Sandpack } from "@codesandbox/sandpack-react";
 import "@codesandbox/sandpack-react/dist/index.css";
-import { Wrapper } from "../../styled/global";
+import { WrapperS } from "../../styled/global";
 import { App, SigninButton, RegisterButton } from "./staticFile";
-import NavbarBack from "../NavbarBack";
-import GoToHome from "../GoToHome";
 
-export default function PlaygroundPage() {
+export default function Playground(props) {
   return (
-    <Wrapper>
-      <NavbarBack />
-      <h1 style={{ marginTop: -3, textAlign: "center" }}>
-        <a
-          href="/playground"
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          PLAYGROUND
-        </a>
-      </h1>
+    <WrapperS>
+      {props.dashboard ? null : (
+        <>
+          <h1 style={{ marginTop: -3, textAlign: "center" }}>
+            <a
+              href="/playground"
+              style={{ textDecoration: "none", color: "#fff" }}
+            >
+              PLAYGROUND
+            </a>
+          </h1>
+        </>
+      )}
       <div id={9507}>
         <Sandpack
           template="react"
@@ -34,7 +35,6 @@ export default function PlaygroundPage() {
           }}
         />
       </div>
-      <GoToHome />
-    </Wrapper>
+    </WrapperS>
   );
 }

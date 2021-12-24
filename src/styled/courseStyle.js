@@ -1,162 +1,174 @@
 import styled from "styled-components";
 
-// Create a Wrapper component that'll render a <section> tag with some styles
-export const Wrapper = styled.section`
-  padding: 1em;
-  height: 100vh;
-<<<<<<< HEAD
-  @media (max-width: 576px) {
-  }
-=======
->>>>>>> main
-`;
-
-export const Title = styled.h1`
-  color: #000;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 70px;
-  margin-bottom: 50px;
-  @media (max-width: 576px) {
-    font-size: 2rem;
-    margin-top: 50px;
-  }
-`;
-export const CardContent = styled.div`
-  background: #f7f7f7;
+export const CourseRootS = styled.section`
   display: flex;
-  justify-content: center;
-  justify-items: center;
-  border-radius: 10px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  display: flex;
-  max-width: 100%;
-  padding: 0.5em 0;
-  margin: 10px auto;
-  overflow: hidden;
-  @media (max-width: 576px) {
-    max-width: 100%;
-  }
-`;
-
-export const CH6 = styled.h6`
-  margin: 0;
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: #555;
-  text-transform: uppercase;
-`;
-
-export const CH61 = styled.h5`
-  margin: 0;
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: #F7F7F7;
-  text-transform: uppercase;
-`;
-
-export const CH3 = styled.h3`
+  justify-content: space-evenly;
   letter-spacing: 1px;
   font-weight: 400;
+  min-width: 100%;
   color: azure;
-  margin: 10px 0;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+  }
 `;
-
-export const CH31 = styled.h3`
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: black;
-  margin: 10px 0;
-`;
-
-export const CardContentDisabled = styled.div`
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  background: #f7f7f7;
-  cursor: not-allowed;
-  border-radius: 10px;
-  display: flex;
+export const CourseDetailS = styled.div`
   max-width: 100%;
-  padding: 0.5em 0;
-  margin: 20px auto;
-  overflow: hidden;
-  @media (max-width: 576px) {
-    max-width: 100%;
-  }
-`;
-
-export const CardPrev = styled.div`
-  background-color: orange;
-  color: #222;
-  padding: 30px;
-  max-width: 250px;
-  @media (max-width: 576px) {
-    max-width: 180px;
-    padding: 20px;
-  }
-`;
-
-export const CardInfo = styled.div`
-  padding: 30px;
-  position: relative;
-  width: 100%;
-  color: #f7f7f7;
-  @media (max-width: 576px) {
-    padding: 16px;
-  }
-`;
-
-export const CardInfoDisabled = styled.div`
-  padding: 30px;
-  position: relative;
-  width: 100%;
-  @media (max-width: 576px) {
+  margin: 10px;
+  padding: 20px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    margin: 5px;
     padding: 10px;
   }
 `;
 
-export const ButtonCard = styled.a`
-  background-color: orange;
-  border: 0;
-  border-radius: 50px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  color: #000;
-  font-size: 16px;
-  padding: 12px 25px;
-  cursor: pointer;
-  text-decoration: none;
-  position: absolute;
-  bottom: 15px;
-  right: 9px;
-  letter-spacing: 1px;
-  &:hover {
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
-    transform: translate(0, -1px);
+export const CourseDescriptionS = styled.div`
+  border-radius: 0 0 10px 10px;
+  background: rgba(20, 20, 20, 0.7);
+  border-bottom: 2px solid orange;
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+  p,
+  code,
+  pre {
+    font-family: "Arial";
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-size: 1.2em;
+    white-space: pre-wrap;
   }
-  @media (max-width: 576px) {
-    padding: 7px 16px;
-    bottom: 10px;
-    right: 10px;
+
+  figure {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .kg-button-card {
+    background-color: orange;
+    border-radius: 50px;
+    max-width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    padding: 12px 25px;
+    cursor: pointer;
+    margin: 15px 0 15px auto;
+    text-align: center;
+    &:hover {
+      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
+      transform: translate(0, -1px);
+    }
+  }
+
+  a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 10px;
+    max-width: 100%;
+    .kg-button-card {
+      margin: 10px auto;
+    }
+    p,
+    code,
+    pre {
+      font-size: 16px;
+    }
   }
 `;
 
-export const ButtonCardDisabled = styled.a`
-  background-color: #555;
-  border: 0;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 25px;
-  text-decoration: none;
-  position: absolute;
-  bottom: 15px;
-  right: 9px;
+export const CourseHeadingS = styled.h1`
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: azure;
+  text-align: center;
+  padding: 10px;
+`;
+
+export const CourseMessageS = styled.p`
+  text-align: center;
+  color: azure;
+  font-family: "Arial";
+  font-style: italic;
+  margin-top: -20px;
+  margin-bottom: 30px;
+`;
+
+export const CourseTitleS = styled.h2`
   letter-spacing: 1px;
-  @media (max-width: 576px) {
-    padding: 7px 16px;
-    bottom: 10px;
-    right: 10px;
+  font-weight: 400;
+  color: azure;
+  background: rgba(22, 22, 22, 0.9);
+  text-align: center;
+  padding: 30px;
+  border-bottom: 2px solid orange;
+  border-radius: 20px 20px 0 0;
+`;
+
+export const CourseFormContainerS = styled.div`
+  background: #f8f4e5;
+  max-width: 500px;
+  padding: 50px;
+  margin: 0 auto;
+  border: 2px solid rgba(0, 0, 0, 1);
+  box-shadow: 15px 15px 1px orange;
+  input {
+    display: block;
+    font-size: 22px;
+    width: 100%;
+    line-height: 50px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+    background: #f8f4e5;
+    min-width: 250px;
+    padding-left: 5px;
+    outline: none;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  input:focus {
+    border-bottom: 5px solid orange;
+    background: #f7f7f7;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 10px 50px;
+    letter-spacing: 2px;
+    transition: 0.2s all ease-in-out;
+    outline: none;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    box-shadow: 3px 3px 1px 1px rgba(0, 0, 0, 1);
+  }
+  &:hover {
+    color: white;
+  }
+
+  ::selection {
+    background: #f0eae1;
+  }
+
+  input:-webkit-autofill {
+  }
+  input:-webkit-autofill:hover {
+    background: #f8f4e5;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 1);
+  }
+  input:-webkit-autofill:focus {
+    border-bottom: 5px solid orange;
+    -webkit-text-fill-color: orange;
+    -webkit-box-shadow: 0 0 0px 1000px f8f4e5 inset;
+    transition: 2s ease-in-out 0s;
   }
 `;
