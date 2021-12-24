@@ -11,6 +11,6 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Custom404() {
+export default function Custom500() {
   return <NotFoundComponent />;
 }
