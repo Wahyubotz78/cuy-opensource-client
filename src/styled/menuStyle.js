@@ -53,8 +53,8 @@ export const MenuS = styled.div`
   font-size: clamp(1rem, 8vw, 99rem);
   padding: 1vw;
   img {
-    width: 50%;
-    height: 50%;
+    max-width: 50%;
+    max-height: 50%;
     margin: 0 auto;
     cursor: pointer;
   }
