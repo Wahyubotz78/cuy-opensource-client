@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Sandpack } from "@codesandbox/sandpack-react";
 import "@codesandbox/sandpack-react/dist/index.css";
-import { WrapperS } from "../../styled/global";
+import { WrapperS, ClearTopMobileS } from "../../styled/global";
 import { App, SigninButton, RegisterButton } from "./staticFile";
 
 export default function Playground(props) {
   return (
     <WrapperS>
       {props.dashboard ? null : (
-        <>
+        <ClearTopMobileS>
           <h1 style={{ marginTop: -3, textAlign: "center" }}>
             <a
               href="/playground"
@@ -17,7 +17,7 @@ export default function Playground(props) {
               PLAYGROUND
             </a>
           </h1>
-        </>
+        </ClearTopMobileS>
       )}
       <div id={9507}>
         <Sandpack
