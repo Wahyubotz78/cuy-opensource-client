@@ -9,7 +9,7 @@ import store from "../../store";
 export const thunk_getUser = (data) => {
   store.dispatch(getUserLoading());
   apiGetUserById(data)
-    .then((res) => {
+  .then((res) => {
       if (res.data.success) {
         store.dispatch(getUserSuccess(res.data.data));
       } else {
