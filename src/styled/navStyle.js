@@ -11,13 +11,28 @@ export const NavContainer = styled.nav`
   z-index: 9;
   overflow: hidden;
   background-image: url("/images/mainbg.png");
-  border-bottom: 2px solid orange;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #fff00d, #ffa500);
+  animation: animateBorder 3s infinite;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
     bottom: 0;
     top: auto;
-    border-top: 3px solid orange;
+    border-top: 2px;
+    border-top-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #fff00d, #ffa500);
     border-bottom: none;
+  }
+  @keyframes animateBorder {
+    from {
+      border-image-source: linear-gradient(to right, #743ad5, #ffa500);
+    }
+    to {
+      border-image-source: linear-gradient(to right, #ffa500, #743ad5);
+    }
   }
 `;
 
@@ -60,7 +75,7 @@ export const NavLink = styled.li`
     box-shadow: inset -2px -4px #0006, inset 2px 2px #fff7;
     cursor: pointer;
   }
-  
+
   a:hover {
     opacity: 1;
     text-shadow: 2px 2px #202013cc;

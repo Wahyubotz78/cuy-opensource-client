@@ -27,12 +27,12 @@ const IndexPage = ({ login, text }) => {
   }, []);
 
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
       <h1 style={{ textAlign: "center", color: "white" }}>COMING SOON YA :(</h1>
-      {/* <ModalProvider>
+      /* <ModalProvider>
         <LoginPage title={login} text={text} />
-      </ModalProvider> */}
-    </Provider>
+      </ModalProvider> *
+    {/* </Provider> */
   );
 };
 
