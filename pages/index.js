@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import NProgress from "nprogress";
-import Home from "components/Home";
+// import Home from "components/Home";
+import { Home } from "../src/components/LazyComponents";
 import { ClearTopS } from "styled/global";
 import { getPostByTag, getPageByTag, getSetting } from "libs/gcms";
 
