@@ -82,3 +82,10 @@ export const ClearTopS = styled.div`
 export const ClearBotS = styled.div`
   margin-bottom: 100px;
 `;
+
+export const ClearTopMobileS = styled.div`
+  margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+  }
+`;
