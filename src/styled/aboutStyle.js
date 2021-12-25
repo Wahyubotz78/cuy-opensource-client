@@ -7,8 +7,10 @@ export const AboutImageBoxS = styled.div`
 `;
 
 export const AboutImageS = styled.img`
-  width: 250px;
-  height: 250px;
+  width: 50%;
+  height: 50%;
+  max-width: 100px;
+  max-height: 100px;
 `;
 
 export const AboutContainerS = styled.div`
@@ -19,11 +21,10 @@ export const AboutContainerS = styled.div`
 export const AboutContentS = styled.div`
   color: white;
   font-size: 1.5em;
-  h1 {
+  h3 {
     text-align: center;
     letter-spacing: 0.15em;
-    margin-top: 50px;
-    margin-bottom: -5px;
+    margin-top: 60px;
   }
   div {
     background: rgba(0, 0, 0, 0.1);
