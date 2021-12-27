@@ -5,95 +5,93 @@ import { HeaderTrends } from "../../styled/TrendsStyle";
 import LineTrends from "./chart";
 
 const Trends = () => {
-  const [getTrendsBackend, setTrendsBackend] = useState({});
-  const [getTrendsFrontend, setTrendsFrontend] = useState({});
-  const [isGetDataBackend, isSetDataBackend] = useState(false);
-  const [isGetDataFrontend, isSetDataFrontend] = useState(false);
+  const [getTrendsDataBase, setTrendsDataBase] = useState({});
+  const [getTrendsLanguage, setTrendsLanguage] = useState({});
+  const [isGetDataDataBase, isSetDataDataBase] = useState(false);
+  const [isGetDataLanguage, isSetDataLanguage] = useState(false);
 
-  const [formDataBackend, setFormDataBackend] = useState([]);
-  const [formDataFrontend, setFormDataFrontend] = useState([]);
-  const [isGetFormDataBackend, isSetFormDataBackend] = useState(false);
-  const [isGetFormDataFrontend, isSetFormDataFrontend] = useState(false);
+  const [formDataDataBase, setFormDataDatabase] = useState([]);
+  const [formDataLanguage, setFormDataLanguage] = useState([]);
+  const [isGetFormDataDataBase, isSetFormDataDataBase] = useState(false);
+  const [isGetFormDataLanguage, isSetFormDataLanguage] = useState(false);
 
   const url = "https://outdated-trends.herokuapp.com/trends";
   const headers = {
     "Content-Type": "application/json",
   };
-  // const formDataBackend = ["php", "javascript"];
-  // const formDataFrontend = ["tailwind", "bootstrap"];
 
   useEffect(async () => {
-    const fetchFormDataBackend = async () => {
+    const fetchFormDataDataBase = async () => {
       let { data } = await axios.get(
         "https://survey-stackoverflow.herokuapp.com/db",
         headers
       );
-      setFormDataBackend(data);
+      setFormDataDatabase(data);
     };
-    const fetchFormDataFrontend = async () => {
+    const fetchFormDataLanguage = async () => {
       let { data } = await axios.get(
         "https://survey-stackoverflow.herokuapp.com/lp",
         headers
       );
-      setFormDataFrontend(data);
+      setFormDataLanguage(data);
     };
-    if (!isGetFormDataBackend) {
-      await fetchFormDataBackend();
-      isSetFormDataBackend(true);
+    if (!isGetFormDataDataBase) {
+      await fetchFormDataDataBase();
+      isSetFormDataDataBase(true);
     }
-    if (!isGetFormDataFrontend) {
-      await fetchFormDataFrontend();
-      isSetFormDataFrontend(true);
+    if (!isGetFormDataLanguage) {
+      await fetchFormDataLanguage();
+      isSetFormDataLanguage(true);
     }
   }, []);
 
   useEffect(async () => {
-    const fetchDataBackend = async () => {
+    const fetchDataDataBase = async () => {
       let { data } = await axios.post(
         url,
         {
-          word: formDataBackend,
+          word: formDataDataBase,
         },
         headers
       );
-      setTrendsBackend(data);
+      setTrendsDataBase(data);
     };
-    const fetchDataFrontend = async () => {
+    const fetchDataLanguage = async () => {
       let { data } = await axios.post(
         url,
         {
-          word: formDataFrontend,
+          word: formDataLanguage,
         },
         headers
       );
-      setTrendsFrontend(data);
+      setTrendsLanguage(data);
     };
-    if (!isGetDataBackend && isGetFormDataBackend) {
-      await fetchDataBackend();
-      isSetDataBackend(true);
+    if (!isGetDataDataBase && isGetFormDataDataBase) {
+      await fetchDataDataBase();
+      isSetDataDataBase(true);
     }
-    if (!isGetDataFrontend && isGetFormDataFrontend) {
-      await fetchDataFrontend();
-      isSetDataFrontend(true);
+    if (!isGetDataLanguage && isGetFormDataLanguage) {
+      await fetchDataLanguage();
+      isSetDataLanguage(true);
     }
-  }, [isGetFormDataBackend, isGetFormDataFrontend]);
+  }, [isGetFormDataDataBase, isGetFormDataLanguage]);
 
   return (
     <WrapperS>
-      <HeaderTrends>Trends Language Programming</HeaderTrends>
-      {isGetDataBackend && (
+      <HeaderTrends>Trends Programming</HeaderTrends>
+      {isGetDataDataBase && (
         <LineTrends
-          datas={getTrendsBackend}
-          keywordsData={formDataBackend}
-          title="Backend Populer"
+          datas={getTrendsDataBase}
+          keywordsData={formDataDataBase}
+          title="Database Populer"
         />
       )}
       <ClearTopS />
-      {isGetDataFrontend && (
+      {isGetDataLanguage && (
         <LineTrends
-          datas={getTrendsFrontend}
-          keywordsData={formDataFrontend}
-          title="Frontend Populer"
+          datas={getTrendsLanguage}
+          keywordsData={formDataLanguage}
+          title="Language Populer"
         />
       )}
     </WrapperS>
