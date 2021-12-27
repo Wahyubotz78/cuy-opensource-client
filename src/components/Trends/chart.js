@@ -1,35 +1,55 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import { Chart as ChartJs, Title } from "chart.js";
+import {
+  Chart as ChartJs,
+  Title,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
-ChartJs.register(Title);
+ChartJs.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 export const colors = {
   // Light theme colors
   light: ["#ff0000", "#006900", "#0000ff", "#ff9922", "#800080"],
+
   // Dark theme colors
   dark: ["#ff0000", "#00ff00", "#00ffff", "#ffcc00", "#ff00ff"],
 };
 
-// const dataTrends = "https://insights.stackoverflow.com/trends/get-data";
-
-export const options = {
-  responsive: true,
-  plugins: {
-    title: {
-      display: true,
-      text: "Chart.js Line Chart",
+const options = (text) => {
+  const data = {
+    responsive: true,
+    plugins: {
+      title: {
+        display: true,
+        text,
+        color: "#ffffff",
+      },
     },
-  },
+  };
+
+  return data;
 };
 
 const mapMultiLine = (data, keywords) => {
   const mappedData = [];
 
-  console.log(keywords);
-
   for (let i = 0; i < keywords.length; i++) {
     const value = [];
+
     data.yAxis.forEach((element) => {
       value.push(element[i]);
     });
@@ -47,52 +67,16 @@ const mapMultiLine = (data, keywords) => {
   return mappedData;
 };
 
-const LineTrends = ({ datas }) => {
-  // if (typeof datas === undefined) return;
+const LineTrends = ({ datas, keywordsData, title }) => {
+  const labels = datas.xAxis;
+  const datasets = mapMultiLine(datas, keywordsData);
 
-  if (typeof datas === "object") {
-    const keywords = datas.xAxis;
-    // const datasets = mapMultiLine(datas, keywords);
+  const data = {
+    labels,
+    datasets,
+  };
 
-    console.log(keywords);
-  }
-  // if (datas != "") {
-
-  //   const data = {
-  //     labels: keywords,
-  //     datasets,
-  //   };
-
-  //   return <Line options={options} data={data} />;
-  // }
-  // {
-  //   datas && <>loaded</>;
-  // }
-
-  // console.log();
-  console.log(typeof datas);
-
-  return <>test</>;
+  return <Line options={options(title)} data={data} />;
 };
 
 export default LineTrends;
-
-// export default function LineTrends({ datas }) {
-//   if (datas) {
-//     console.log(datas);
-
-//     // console.log(datasets);
-//   }
-//   //   {datas && return (
-
-//   //   )
-
-//   //   }}
-
-//   // console.log(datasets);
-
-//   return <>test</>;
-// }
-// export const LineTrends = (datas) => {
-//   console.log(datas);
-// };

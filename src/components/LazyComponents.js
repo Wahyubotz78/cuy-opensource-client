@@ -31,6 +31,8 @@ export const CourseRegistration = dynamic(
   options
 );
 
+export const Trends = dynamic(() => import("../components/Trends"), options);
+
 // export const Profile = dynamic(() => import("../components/Profile"), options);
 
 // export const Dashboard = dynamic(
