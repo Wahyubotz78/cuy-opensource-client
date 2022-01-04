@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 // import Course from "components/Course/index.js";
 import { Course } from "../../src/components/LazyComponents";
 
-import { getPostByTag, getSetting } from "libs/gcms";
+import { getPostByTag, getSetting } from "../../src/libs/gcms";
 
 export const getStaticProps = async () => {
   const { navigation } = (await getSetting()) || "";

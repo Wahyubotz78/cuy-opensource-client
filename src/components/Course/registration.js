@@ -3,9 +3,9 @@ import {
   CourseHeadingS,
   CourseFormContainerS,
   CourseMessageS,
-} from "styled/courseStyle";
-import { ClearTopS, ClearBotS } from "styled/global";
-import { whatsapp } from "libs/whatsapp";
+} from "../../styled/courseStyle";
+import { ClearTopS, ClearBotS } from "../../styled/global";
+import { whatsapp } from "../../libs/whatsapp";
 
 export default function CourseRegistration() {
   const [nama, setNama] = useState("");
