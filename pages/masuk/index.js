@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import NProgress from "nprogress";
-import { Provider } from "react-redux";
-import store from "redux/store";
-import { ModalProvider } from "styled-react-modal";
+// import { Provider } from "react-redux";
+// import store from "redux/store";
+// import { ModalProvider } from "styled-react-modal";
 // import LoginPage from "components/Login";
-import { Login } from "../../src/components/LazyComponents";
+// import { Login } from "../../src/components/LazyComponents";
 import { getPostByTag, getPageByTag, getSetting } from "libs/gcms";
 
 export const getStaticProps = async () => {

@@ -5,9 +5,9 @@ import {
   CourseDescriptionS,
   CourseRootS,
   CourseTitleS,
-} from "styled/courseStyle";
-import ReadMore from "components/Helper/ReadMore";
-import { jsonRender } from "libs/jsonRenderer";
+} from "../../styled/courseStyle";
+import ReadMore from "../../components/Helper/ReadMore";
+import { jsonRender } from "../../libs/jsonRenderer";
 
 export default function Course({ courseData }) {
   return <CourseList courseDatas={courseData} />;
