@@ -4,7 +4,7 @@ import {
   NavGroup,
   NavGroupRight,
   NavLink,
-} from "styled/navStyle";
+} from "../styled/navStyle";
 import { getPathName } from "../libs/urlScraping";
 import { Popup } from "../libs/popup";
 
