@@ -30,3 +30,9 @@ export default function App() {
         </div>
     )
   }`;
+
+export const AppReactTs = `
+export default function App(): JSX.Element {
+  return <h1>Hello Cuy</h1>
+}
+`;

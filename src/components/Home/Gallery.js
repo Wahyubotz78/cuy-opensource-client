@@ -39,7 +39,7 @@ const Gallery = () => {
   return (
     <>
       <WrapperS>
-        <Title>showcase challange</Title>
+        <Title>Trend Avatar</Title>
         <Swiper
           slidesPerView={3}
           spaceBetween={getSpaceBetween}
@@ -48,36 +48,50 @@ const Gallery = () => {
         >
           <SwiperSlide>
             <ImgSlide
-              src="https://swiperjs.com/demos/images/nature-1.jpg"
-              alt="image example 1"
+              src="/images/avatar/ava1.png"
+              alt="trend avatar #1"
               onClick={handleOnClick}
             />
           </SwiperSlide>
           <SwiperSlide>
             <ImgSlide
-              src="https://swiperjs.com/demos/images/nature-2.jpg"
-              alt="image example 2"
+              src="/images/avatar/ava2.png"
+              alt="trend avatar #2"
               onClick={handleOnClick}
             />
           </SwiperSlide>
           <SwiperSlide>
             <ImgSlide
-              src="https://swiperjs.com/demos/images/nature-3.jpg"
-              alt="image example 3"
+              src="/images/avatar/ava3.png"
+              alt="trend avatar #3"
               onClick={handleOnClick}
             />
           </SwiperSlide>
           <SwiperSlide>
             <ImgSlide
-              src="https://swiperjs.com/demos/images/nature-4.jpg"
-              alt="image example 4"
+              src="/images/avatar/ava4.png"
+              alt="trend avatar #4"
               onClick={handleOnClick}
             />
           </SwiperSlide>
           <SwiperSlide>
             <ImgSlide
-              src="https://swiperjs.com/demos/images/nature-5.jpg"
-              alt="image example 5"
+              src="/images/avatar/ava5.png"
+              alt="trend avatar #5"
+              onClick={handleOnClick}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ImgSlide
+              src="/images/avatar/ava6.png"
+              alt="trend avatar #6"
+              onClick={handleOnClick}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ImgSlide
+              src="/images/avatar/ava7.png"
+              alt="trend avatar #7"
               onClick={handleOnClick}
             />
           </SwiperSlide>

@@ -6,6 +6,7 @@ import {
   NavLink,
 } from "styled/navStyle";
 import { getPathName } from "../libs/urlScraping";
+import { Popup } from "libs/popup";
 
 import { useRouter } from "next/router";
 
@@ -31,13 +32,11 @@ export default function Navbar({ navigationData }) {
         })}
       </NavGroup>
       <NavGroupRight>
-        <NavLink>
-          <a href="/course" style={{ border: "2px solid orange" }}>
-            Kelas
-          </a>
+        <NavLink className="course">
+          <a href="/course">Kelas</a>
         </NavLink>
         <NavLink>
-          <a href="/dashboard">Pintu Masuk</a>
+          <a as="button" onClick={() => Popup()}>Pintu Masuk</a>
         </NavLink>
       </NavGroupRight>
     </NavContainer>
