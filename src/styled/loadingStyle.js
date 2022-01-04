@@ -34,10 +34,7 @@ export const SpinnerPage = styled.div`
   animation: ${rotate360} 1s linear infinite;
   transform: translateZ(0);
   margin: auto;
-  border-top: 2px solid grey;
-  border-right: 2px solid grey;
-  border-bottom: 2px solid grey;
-  border-left: 4px solid black;
+  border-left: 4px solid white;
   background: transparent;
   width: ${props => props.width};
   height: ${props => props.height};

@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import Navbar from "components/Navbar";
+import Navbar from "../components/Navbar";
 
 class Layout extends PureComponent {
   constructor(props) {
