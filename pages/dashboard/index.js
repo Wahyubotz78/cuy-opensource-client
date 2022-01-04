@@ -17,11 +17,12 @@ export const getStaticProps = async () => {
 
 const IndexPage = () => {
   return (
-    <Provider store={store}>
-      <ModalProvider>
-        <DashboardPage />
-      </ModalProvider>
-    </Provider>
+    <h1 style={{ textAlign: "center", color: "white" }}>COMING SOON YA :(</h1>
+    // <Provider store={store}>
+    //   <ModalProvider>
+    //     <DashboardPage />
+    //   </ModalProvider>
+    // </Provider>
   );
 };
 

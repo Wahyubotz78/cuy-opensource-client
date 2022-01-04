@@ -18,11 +18,11 @@ export default function About({ datas }) {
         return (
           <div key={i}>
             <AboutImageBoxS>
-              <AboutImageS src={about.feature_image} />
+              <AboutImageS src={about.feature_image} alt="about cuy universe" />
             </AboutImageBoxS>
             <AboutContainerS>
               <AboutContentS>
-                <h1>{about.title}</h1>
+                <h3>{about.title}</h3>
               </AboutContentS>
               <AboutContentS>
                 <div

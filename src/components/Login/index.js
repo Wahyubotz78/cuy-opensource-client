@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import {
-    CardWrapper,
-    CardHeader,
-    CardHeading,
-    CardBody,
-    CardIcon,
-    CardFieldset,
-    CardInput,
-    CardButton,
-    CardLink
-} from "styled/loginStyle";
-import { StyledModal, ModalWrapper } from 'styled/popupStyle';
+    CourseHeadingS,
+    CourseFormContainerS,
+    CourseMessageS,
+  } from "styled/courseStyle";
+  import { ClearTopS, ClearBotS } from "styled/global";
 import { SpinnerPage } from 'styled/loadingStyle';
 import { Container } from 'styled/dashboardStyle';
 import { thunk_login } from 'redux/middleware/login/loginMiddleware';
@@ -19,7 +13,6 @@ import { encryptRequest } from 'libs/secret';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = (props) => {
-
     const [typePassword, setTypePassword] = useState('password');
     const [noHp, setNoHp] = useState('');
     const [password, setPassword] = useState('');
@@ -78,52 +71,36 @@ const Login = (props) => {
     }
 
     return (
-        <Container>
-            { loadingPage ? <SpinnerPage width="100px" height="100px"/> : 
+        <div>
+            { loadingPage ? 
+                <Container>
+                    <SpinnerPage width="100px" height="100px" /> 
+                </Container> :
                 <>
-                    <StyledModal
-                        isOpen={isOpen}
-                    >
-                        <ModalWrapper>
-                            <CardHeader>
-                                <CardHeading>
-                                    { message }
-                                </CardHeading>
-                            </CardHeader>
-                            <CardBody>
-                                <CardButton type="button" onClick={ () => setIsOpen(false)  }>Tutup</CardButton>
-                            </CardBody>
-                        </ModalWrapper>
-                    </StyledModal>
-                    <CardWrapper>
-                        <CardHeader>
-                            <CardHeading>{ props.title[0].title }</CardHeading>
-                        </CardHeader>
-                        <CardBody>
-                            { props.text.map( (data,i) => {
-                                return (
-                                    <React.Fragment key={i}>
-                                        <CardFieldset>
-                                            <CardInput placeholder={ data.title } type={ data.custom_excerpt == 'password' ? typePassword : data.custom_excerpt} onChange={ (e) => changeInput(e.target.value, data.title) } value={ data.title == 'No Telepon' ? noHp : undefined } required />
-                                            { data.custom_excerpt == 'password' ? 
-                                            <CardIcon eye small onClick={ () => showPassword() }>{ typePassword === 'password' ? <FaEye /> : <FaEyeSlash /> }</CardIcon>
-                                            : null }
-                                        </CardFieldset>
-                                    </React.Fragment>
-                                )
-                            })}
-                            <CardFieldset>
-                                <CardButton type="button" onClick={ () => props.loginReducer.Loading ? null : login() }>{ props.loginReducer.Loading ? <SpinnerPage width="15px" height="15px"/> : props.title[0].title }</CardButton>
-                            </CardFieldset>
-                            <CardFieldset>
-                                { props.title[0].excerpt.slice(0, 18) } <CardLink onClick={ () => window.location = '/daftar' }>{ props.title[0].excerpt.slice(18, 30) }</CardLink>
-                            </CardFieldset>
-                        </CardBody>
-                    </CardWrapper>
+                    <ClearTopS />
+                    <CourseHeadingS>{ props.title[0].title }</CourseHeadingS>
+                    <CourseMessageS>{message}</CourseMessageS>
+                    <CourseFormContainerS>
+                        { props.text.map( (data,i)  => {
+                            return(
+                                <div key={i} style={{ display: "inline-block", position: "relative",overflow: "hidden" }}>
+                                    <input
+                                        type={ data.custom_excerpt === 'password' ? typePassword : data.custom_excerpt }
+                                        placeholder={ data.title }
+                                        onChange={(e) => changeInput(e.target.value, data.title)}
+                                        value={ data.title === "No Telepon" ? noHp : undefined }
+                                    />
+                                    { data.custom_excerpt == 'password' ? <span style={{ position: "absolute",top: "25px", right: 0, color: "#808080", cursor: "pointer" }} onClick={ () => showPassword() }>{ typePassword === 'password' ? <FaEye /> : <FaEyeSlash /> }</span> : null }
+                                </div>
+                            )
+                        })}
+                        <button  onClick={ () => login() } style={{ cursor: "pointer" }}>{ props.title[0].title }</button>
+                    </CourseFormContainerS>
+                    <ClearBotS />
                 </>
             }
-        </Container>
-    )
+        </div>
+      );
 }
 
 export default connect((state) => state)(Login);

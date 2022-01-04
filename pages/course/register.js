@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-import CourseRegistration from "components/Course/registration";
+// import CourseRegistration from "components/Course/registration";
+import { CourseRegistration } from "../../src/components/LazyComponents";
+// ;
 import { getSetting } from "libs/gcms";
 
 export const getStaticProps = async () => {
