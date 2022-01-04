@@ -43,7 +43,7 @@ export default function CourseRegistration() {
         email,
         nomor,
         profesi,
-        "Mastering%20CSS%20Basic%20"
+        "NodeJS%20From%20Basic%20"
       );
     } else {
       setMessage("isi data yang bener dan lengkap ya cuy 🤞");

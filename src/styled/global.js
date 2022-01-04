@@ -42,7 +42,7 @@ export const BoxS = styled.div`
 export const TitleS = styled.h1`
   text-align: center;
   text-transform: uppercase;
-  font-size: 120px;
+  font-size: 110px;
   color: #f7f7f7;
   text-shadow: -10px -2px; #FFF;
   font-weight: bold;
@@ -56,8 +56,8 @@ export const TitleS = styled.h1`
   -moz-background-clip: text;
   background-clip: text;
   @media screen and (max-width: 768px) {
-    font-size: 55px;
-    margin-bottom: 50px;
+    font-size: 45px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -70,8 +70,8 @@ export const DescriptionS = styled.div`
   text-shadow: 5px 3px #222;
 
   @media screen and (max-width: 768px) {
-    font-size: 35px;
-    margin-top: -40px;
+    font-size: 22px;
+    margin-top: -35px;
   }
 `;
 

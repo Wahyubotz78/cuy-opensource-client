@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { Provider } from "react-redux";
 import NProgress from "nprogress";
 import store from "../../src/redux/store";
-import RegisterPage from "../../src/components/Register";
+// import RegisterPage from "../../src/components/Register";
+import { Register } from "../../src/components/LazyComponents";
 import { ModalProvider } from "styled-react-modal";
 import { getPostByTag, getPageByTag, getSetting } from "libs/gcms";
 
@@ -29,7 +30,7 @@ const IndexPage = ({ register, text }) => {
   return (
     <Provider store={store}>
       <ModalProvider>
-        <RegisterPage title={register} text={text} />
+        <Register title={register} text={text} />
       </ModalProvider>
     </Provider>
   );
