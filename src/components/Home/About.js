@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { WrapperS } from "styled/global";
+import { WrapperS } from "../../styled/global";
 import {
   AboutContainerS,
   AboutContentS,
   AboutImageBoxS,
   AboutImageS,
-} from "styled/aboutStyle";
-import { jsonRender } from "libs/jsonRenderer";
-import ReadMore from "components/Helper/ReadMore";
+} from "../../styled/aboutStyle";
+import { jsonRender } from "../../libs/jsonRenderer";
+import ReadMore from "../Helper/ReadMore";
 
 export default function About({ datas }) {
   const defaultTextLength = 300;

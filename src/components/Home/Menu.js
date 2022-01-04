@@ -1,6 +1,6 @@
 import React from "react";
-import { ContainerMenuS, MainMenuS, MenuS } from "styled/menuStyle";
-import { Popup } from "libs/popup";
+import { ContainerMenuS, MainMenuS, MenuS } from "../../styled/menuStyle";
+import { Popup } from "../../libs/popup";
 
 export default function NavigationMenu({ datas }) {
   return (

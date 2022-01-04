@@ -1,7 +1,7 @@
 import React from "react";
-import { WrapperS, TitleS, DescriptionS } from "styled/global";
+import { WrapperS, TitleS, DescriptionS } from "../../styled/global";
 import Typist from "react-typist";
-import { jsonRender } from "libs/jsonRenderer";
+import { jsonRender } from "../../libs/jsonRenderer";
 
 export default function Intro({ data }) {
   return (

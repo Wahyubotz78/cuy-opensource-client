@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { WrapperS } from "styled/global";
+import { WrapperS } from "../../styled/global";
 import {
   Title,
   ImgSlide,

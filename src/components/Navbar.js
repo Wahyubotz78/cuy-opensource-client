@@ -6,7 +6,7 @@ import {
   NavLink,
 } from "styled/navStyle";
 import { getPathName } from "../libs/urlScraping";
-import { Popup } from "libs/popup";
+import { Popup } from "../libs/popup";
 
 import { useRouter } from "next/router";
 

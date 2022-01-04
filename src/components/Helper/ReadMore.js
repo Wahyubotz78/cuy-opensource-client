@@ -1,4 +1,4 @@
-import { ReadMoreS } from "styled/global";
+import { ReadMoreS } from "../../styled/global";
 export default function ReadMore({ isReadMore, setReadMore }) {
   return (
     <ReadMoreS onClick={() => setReadMore(!isReadMore)}>
