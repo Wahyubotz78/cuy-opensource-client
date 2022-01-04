@@ -5,7 +5,7 @@ import NProgress from "nprogress";
 // import { ModalProvider } from "styled-react-modal";
 // import LoginPage from "components/Login";
 // import { Login } from "../../src/components/LazyComponents";
-import { getPostByTag, getPageByTag, getSetting } from "libs/gcms";
+import { getPostByTag, getPageByTag, getSetting } from "../../src/libs/gcms";
 
 export const getStaticProps = async () => {
   const login = (await getPostByTag("login")) || "";

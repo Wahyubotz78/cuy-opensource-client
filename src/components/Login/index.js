@@ -3,13 +3,13 @@ import {
     CourseHeadingS,
     CourseFormContainerS,
     CourseMessageS,
-  } from "styled/courseStyle";
-  import { ClearTopS, ClearBotS } from "styled/global";
-import { SpinnerPage } from 'styled/loadingStyle';
-import { Container } from 'styled/dashboardStyle';
-import { thunk_login } from 'redux/middleware/login/loginMiddleware';
+  } from "../../styled/courseStyle";
+  import { ClearTopS, ClearBotS } from "../../styled/global";
+import { SpinnerPage } from '../../styled/loadingStyle';
+import { Container } from '../../styled/dashboardStyle';
+import { thunk_login } from '../../redux/middleware/login/loginMiddleware';
 import { connect } from "react-redux";
-import { encryptRequest } from 'libs/secret';
+import { encryptRequest } from '../../libs/secret';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = (props) => {

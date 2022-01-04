@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import store from "../../src/redux/store";
 import DashboardPage from "../../src/components/dashboard";
 import { ModalProvider } from "styled-react-modal";
-import { getSetting } from "libs/gcms";
+import { getSetting } from "../../src/libs/gcms";
 
 export const getStaticProps = async () => {
   const { navigation } = (await getSetting()) || "";
