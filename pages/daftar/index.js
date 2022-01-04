@@ -5,7 +5,7 @@ import store from "../../src/redux/store";
 // import RegisterPage from "../../src/components/Register";
 import { Register } from "../../src/components/LazyComponents";
 import { ModalProvider } from "styled-react-modal";
-import { getPostByTag, getPageByTag, getSetting } from "libs/gcms";
+import { getPostByTag, getPageByTag, getSetting } from "../../src/libs/gcms";
 
 export const getStaticProps = async () => {
   const register = (await getPostByTag("register")) || "";

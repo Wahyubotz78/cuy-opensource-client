@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 // import PlaygroundComponent from "components/Playground";
 import { PlaygroundLazy } from "../src/components/LazyComponents";
-import { getSetting } from "libs/gcms";
+import { getSetting } from "../src/libs/gcms";
 
 export const getStaticProps = async () => {
   const { navigation } = (await getSetting()) || "";
